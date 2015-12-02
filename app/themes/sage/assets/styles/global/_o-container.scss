@@ -1,0 +1,4 @@
+.o-container {
+  padding: { left: base('padding'); right: base('padding'); }
+  @include container;
+}

@@ -1,0 +1,40 @@
+#################
+## Root
+#################
+/*
+!.htaccess
+!.gitignore
+!app/
+!composer.json
+!index.php
+!wp-cli.yml
+!wp-config.php
+
+#################
+## Ignore everything in the "app" directory, except the "plugins" and "themes" directories.
+#################
+app/*
+!app/plugins/
+!app/themes/
+
+#################
+## Ignore everything in the "themes" directory, except the themes you specify
+#################
+app/themes/*
+!app/themes/sage/
+
+#################
+## Theme files/folders
+#################
+app/themes/sage/node_modules/*
+app/themes/sage/.sass-cache/*
+
+#################
+## PhpStorm
+#################
+app/themes/sage/.idea/*
+
+#################
+## OS X
+#################
+app/themes/sage/.DS_Store

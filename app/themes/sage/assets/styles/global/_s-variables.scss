@@ -1,0 +1,67 @@
+///
+// Layout Configuration
+///
+$susy: (
+  columns: 12,
+  container: 1200px,
+  gutters: 1/4,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: rgba(#fd6f4f, 0.15)
+  )
+);
+
+///
+// Base global defaults
+///
+$base-config: (
+  padding:      15px,
+  font-size:    16px,
+  font-family:  sans-serif,
+  line-height:  1.5
+);
+
+///
+// Breakpoints
+///
+$breakpoints: (
+  small:  768px,
+  medium: 992px,
+  large:  1200px
+);
+
+///
+// Colors
+///
+$colors: (
+  body:       #383838,
+  link:       #f66b34,
+  error:      #f2dede,
+  success:    #dff0d8
+);
+
+///
+// Social Networks
+///
+$social-networks: (
+  facebook:   #3b5998,
+  twitter:    #00aced,
+  googleplus: #dd4b39,
+  linkedin:   #007bb6,
+  youtube:    #bb0000,
+  instagram:  #517fa4,
+  pinterest:  #cb2027,
+  flickr:     #ff0084,
+  tumblr:     #32506d,
+  foursquare: #0072b1,
+  dribble:    #ea4c89,
+  vine:       #00bf8f
+);
+
+///
+// Z-index Map for @function z();
+///
+$z-index: (
+
+);

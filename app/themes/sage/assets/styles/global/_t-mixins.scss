@@ -1,0 +1,52 @@
+///
+/// Clearfix for modern browsers
+///
+/// @ignore
+///
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+///
+/// Media Queries
+///
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn 'Couldn\'t find a breakpoint named \'#{$breakpoint}\'.';
+  }
+}
+
+///
+/// Link Psuedo States
+///
+/// @param {boolean} $parent [true] - Can include the parent selector too if set to
+///
+@mixin link-states($parent: false) {
+  @if ($parent){
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+
+  }
+}
