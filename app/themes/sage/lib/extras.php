@@ -3,6 +3,7 @@
 namespace Roots\Sage\Extras;
 
 use Roots\Sage\Config;
+use Roots\Sage\Assets;
 
 /**
  * Add <body> classes
@@ -40,7 +41,7 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 function login()
 {
   if (in_array($GLOBALS['pagenow'], ['wp-login.php','wp-register.php'])) {
-    wp_enqueue_style('sage_login', get_template_directory_uri() . '/dist/styles/custom-login.css');
+    wp_enqueue_style('sage_login', Assets\asset_path('styles/custom-login.css'), false, null);
   }
 }
 add_action('login_head', __NAMESPACE__ . '\\login');
