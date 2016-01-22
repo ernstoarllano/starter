@@ -1,8 +1,5 @@
 # [Sage](https://roots.io/sage/)
-[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
-[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
-
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
+Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, that will help you make better themes.
 
 * Source: [https://github.com/roots/sage](https://github.com/roots/sage)
 * Homepage: [https://roots.io/sage/](https://roots.io/sage/)
@@ -42,16 +39,6 @@ Install the [Soil](https://github.com/roots/soil) plugin to enable additional fe
 * Nice search (`/search/query/`)
 * Google CDN jQuery snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * Google Analytics snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
-
-## Installation
-
-Clone the git repo - `git clone https://github.com/roots/sage.git` and then rename the directory to the name of your theme or website.
-
-If you don't use [Bedrock](https://github.com/roots/bedrock), you'll need to add the following to your `wp-config.php` on your development installation:
-
-```php
-define('WP_ENV', 'development');
-```
 
 ## Configuration
 
@@ -105,10 +92,6 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
 ## Documentation
 
 Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
 
 ## Community
 

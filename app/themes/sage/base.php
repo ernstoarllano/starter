@@ -20,16 +20,7 @@ use Roots\Sage\Extras;
     <?php if (!is_front_page()) { ?>
       <section class="c-main c-main--<?= Extras\main_class(); ?>" role="document">
         <div class="o-container">
-          <div class="o-layout">
-            <div class="col-8">
-              <?php include Wrapper\template_path(); ?>
-            </div>
-            <?php if (Config\display_sidebar()) : ?>
-              <aside class="col-4" role="complementary">
-                <?php include Wrapper\sidebar_path(); ?>
-              </aside>
-            <?php endif; ?>
-          </div>
+          <?php include Wrapper\template_path(); ?>
         </div>
       </section> <!-- /.c-main -->
     <?php } else { ?>
