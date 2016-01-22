@@ -11,6 +11,12 @@
     deny from all
 </Files>
 
+<IfModule mod_headers.c>
+    Header always set X-Xss-Protection "1; mode=block"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
 <IfModule mod_rewrite.c>
     #RewriteEngine on
     #RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
