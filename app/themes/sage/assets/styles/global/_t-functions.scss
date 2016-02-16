@@ -1,4 +1,22 @@
 ///
+/// Retrieve grid configuration from sass map $grid-config
+///
+/// @param {string} $property - Name of base default to return from $grid-config.
+///
+/// @require {variable} $grid-config
+///
+/// @ignore
+///
+@function grid($property) {
+  @if map-has-key($grid-config, $property) {
+    @return map-get($grid-config, $property);
+  } @else {
+    @warn "'#{$property}' is not an available version of #{$grid-config}.";
+    @return null;
+  }
+}
+
+///
 /// Retrieve base default from sass map $base-config
 ///
 /// @param {string} $property - Name of base default to return from $base-config.
@@ -30,6 +48,19 @@
 }
 
 ///
+/// Retrieve social network color from sass map $social-networks
+///
+/// @param {string} $social-network - Name of social network to return from $social-networks.
+///
+/// @require {variable} $social-networks
+///
+@function social($social-network) {
+  @if map-has-key($social-networks, $social-network) {
+    @return map-get($social-networks, $social-network);
+  }
+}
+
+///
 /// Retrieve z-index value from sass map $z-index
 ///
 /// @param {string} $element - Element to return z-index value from $z-index.
@@ -43,4 +74,13 @@
     @warn "'#{$element}' does not have a value set in  #{$z-index}.";
     @return null;
   }
+}
+
+///
+/// Returns the number as a negative.
+///
+/// @param {number} $number
+///
+@function neg($number) {
+    @return -($number);
 }

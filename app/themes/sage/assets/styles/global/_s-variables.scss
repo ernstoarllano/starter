@@ -1,15 +1,10 @@
 ///
-// Layout Configuration
+// Grid configuration
 ///
-$susy: (
-  columns: 12,
-  container: 1200px,
-  gutters: 1/4,
-  global-box-sizing: border-box,
-  debug: (
-    image: show,
-    color: rgba(#fd6f4f, 0.15)
-  )
+$grid-config: (
+  columns:    12,
+  gutter:     0.9375rem,
+  max:        75rem
 );
 
 ///
@@ -26,19 +21,26 @@ $base-config: (
 // Breakpoints
 ///
 $breakpoints: (
-  small:  768px,
-  medium: 992px,
-  large:  1200px
+  small:  48rem,
+  medium: 62rem,
+  large:  75rem
 );
 
 ///
 // Colors
 ///
 $colors: (
-  body:       #383838,
-  link:       #f66b34,
-  error:      #f2dede,
-  success:    #dff0d8
+  body:             #383838,
+  link:             #f66b34,
+  error:            #f2dede,
+  error-message:    #a94442,
+  error-border:     #ebccd1,
+  success:          #dff0d8,
+  success-message:  #3c763d,
+  success-border:   #d6e9c6,
+  info:             #d9edf7,
+  info-message:     #31708f,
+  info-border:      #bce8f1
 );
 
 ///
@@ -65,3 +67,7 @@ $social-networks: (
 $z-index: (
 
 );
+
+///
+// Fonts
+///

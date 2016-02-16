@@ -1,0 +1,18 @@
+.o-col {
+  width: 100%;
+
+  // Small Tablets
+  @include breakpoint(small) {
+    float: left;
+    padding-left: grid('gutter');
+    padding-right: grid('gutter');
+  }
+}
+
+@include breakpoint(small) {
+  @for $i from 1 through grid('columns') {
+    .o-col--#{$i} {
+      width: 100% / grid('columns') * $i;
+    }
+  }
+}

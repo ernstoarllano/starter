@@ -98,7 +98,7 @@ function numbered_pagination()
  */
 function row($atts, $content = null)
 {
-  return '<div class="o-layout">'.do_shortcode($content).'</div>';
+  return '<div class="o-row">'.do_shortcode($content).'</div>';
 }
 add_shortcode('row', __NAMESPACE__ . '\\row');
 
@@ -115,14 +115,32 @@ function column($atts, $content = null)
     'columns' => 'Columns',
   ], $atts));
 
-  return '<div class="col-'.$columns.'">'.do_shortcode($content).'</div>';
+  return '<div class="o-col o-col--'.$columns.'">'.do_shortcode($content).'</div>';
 }
 add_shortcode('column', __NAMESPACE__ . '\\column');
+
+/**
+ * Column Inner
+ *
+ * @param array $atts
+ *
+ * Return column inner container shortcode
+ */
+function column_inner($atts, $content = null)
+{
+  return '<div class="o-col__inner">'.do_shortcode($content).'</div>';
+}
+add_shortcode('inner', __NAMESPACE__ . '\\column_inner');
 
 /**
  * Add Excerpts to pages
  */
 add_post_type_support('page', 'excerpt');
+
+/**
+ * Add shortcode to text widgets
+ */
+add_filter('widget_text', 'do_shortcode');
 
 /**
  * Exclude Category

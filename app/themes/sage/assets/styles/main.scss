@@ -30,7 +30,8 @@
 // Objects
 ///
 @import "global/_o-container";
-@import "global/_o-layout";
+@import "global/_o-row";
+@import "global/_o-col";
 
 ///
 // Components
@@ -39,6 +40,7 @@
 @import "global/_c-header";
 @import "global/_c-footer";
 @import "global/_c-main";
+@import "global/_c-wordpress";
 
 ///
 // Trumps

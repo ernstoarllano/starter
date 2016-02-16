@@ -1,0 +1,33 @@
+.aligncenter {
+  display: block;
+  margin: 1.25rem auto;
+}
+
+.alignleft,
+.alignright {
+  display: block;
+  margin-bottom: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Medium Desktops
+  @include breakpoint(medium) {
+    display: initial;
+  }
+}
+
+.alignleft {
+  // Medium Desktops
+  @include breakpoint(medium) {
+    float: left;
+    margin-right: 1.25rem;
+  }
+}
+
+.alignright {
+  // Medium Desktops
+  @include breakpoint(medium) {
+    float: right;
+    margin-left: 1.25rem;
+  }
+}

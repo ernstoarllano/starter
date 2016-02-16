@@ -1,3 +1,11 @@
+### 8.2.1: February 12, 2016
+• Add default grid classes
+• Add default WordPress image classes
+• Add default alert colors
+• Add column inner shortcode
+• Enable shortcode in text widgets
+• Add grid and negative functions
+
 ### 8.2.1: August 11, 2015
 * Add [FastClick](https://github.com/ftlabs/fastclick)
 * Add default favicon

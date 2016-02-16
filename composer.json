@@ -9,10 +9,10 @@
       "package": {
         "name": "wordpress/wordpress",
         "type": "webroot",
-        "version": "4.4.1",
+        "version": "4.4.2",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/4.4.1.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/4.4.2.zip"
         },
         "require": {
           "fancyguy/webroot-installer": "1.1.0"
@@ -21,7 +21,7 @@
     }
   ],
   "require": {
-    "wordpress/wordpress": "4.4.1",
+    "wordpress/wordpress": "4.4.2",
     "fancyguy/webroot-installer": "1.1.0",
     "wpackagist-plugin/akismet": "3.*",
     "wpackagist-plugin/dynamic-widgets": "1.*",
