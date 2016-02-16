@@ -204,4 +204,4 @@ function image_tag($html, $id, $alt, $title, $align, $size)
 
   return '<img src="'.get_stylesheet_directory_uri().'/dist/images/loading.gif" data-src="'.esc_attr($img_src).'" alt="'.esc_attr($alt).'" class="'.$class.'" />';
 }
-add_filter('get_image_tag', __NAMESPACE__ . '\\image_tag', 10, 6);
+//add_filter('get_image_tag', __NAMESPACE__ . '\\image_tag', 10, 6);
