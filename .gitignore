@@ -26,6 +26,7 @@ app/themes/*
 #################
 ## Theme files/folders
 #################
+app/themes/sage/bower_components/*
 app/themes/sage/node_modules/*
 app/themes/sage/.sass-cache/*
 
