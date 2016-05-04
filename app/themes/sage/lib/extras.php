@@ -143,17 +143,17 @@ add_post_type_support('page', 'excerpt');
 add_filter('widget_text', 'do_shortcode');
 
 /**
- * Exclude Category
+ * Modify Query
  *
- * Exclude categories from main blog
+ * Modify main wp_query
  */
-function exclude_category($query)
+function modify_query($query)
 {
-  if ($query->is_home) {
+  /*if ($query->is_home) {
     $query->set('category__not_in', []);
-  }
+  }*/
 }
-//add_action('pre_get_posts', __NAMESPACE__ . '\\exclude_category');
+//add_action('pre_get_posts', __NAMESPACE__ . '\\modify_query');
 
 /**
  * Current URL

@@ -24,20 +24,10 @@
         // Fastclick
         FastClick.attach(document.body);
 
-        // Mobile Dropdown
-        /*if (viewportWidth > 1024) {
-          $('.mobile-touch').addClass('disabled');
-          $('.mobile-touch').hide();
-        } else {
-          if ($('.mobile-touch').length) {
-            $('.mobile-touch').dropdown();
-          }
-        }*/
-
         // Remove empty p tags
         $('p:empty').remove();
 
-        // External Links.
+        // External links
         $('a').filter(function(){
           return this.hostname && this.hostname !== location.hostname;
         }).addClass('external').attr('target', '_blank');
