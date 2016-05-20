@@ -1,3 +1,6 @@
+### 8.2.1: May 20, 2016
+• Add shame directory and shame.css file for quick fixes and hacks
+
 ### 8.2.1: February 16, 2016
 • Add default grid classes
 • Add default WordPress image classes
