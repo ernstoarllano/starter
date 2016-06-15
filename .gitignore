@@ -5,6 +5,7 @@
 !.htaccess
 !.gitignore
 !app/
+!default.htm
 !composer.json
 !index.php
 !wp-cli.yml
