@@ -47,7 +47,6 @@ define('DISALLOW_FILE_EDIT', true);
  *
  * The default usage is:
  * 	development - For local development
- *	staging - For preparing site for launch
  *	production - For live site
  */
 define('WP_ENV', '');
@@ -64,17 +63,6 @@ switch(WP_ENV){
 
 		/** MySQL local database password */
 		define('DB_PASSWORD', 'local_password_here');
-	break;
-	// Staging
-	case 'staging':
-		/** The name of the staging database for WordPress */
-		define('DB_NAME', 'staging_database_name_here');
-
-		/** MySQL staging database username */
-		define('DB_USER', 'staging_username_here');
-
-		/** MySQL staging database password */
-		define('DB_PASSWORD', 'staging_password_here');
 	break;
 	// Production
 	case 'production':
