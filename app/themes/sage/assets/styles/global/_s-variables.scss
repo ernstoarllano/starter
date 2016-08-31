@@ -24,7 +24,7 @@ $base-font-color:   #000000;
 //
 // Will enable the creation of column offset classes
 ///
-$column-offsets: true;
+$column-offsets: false;
 
 ///
 // Debug mode
@@ -32,7 +32,7 @@ $column-offsets: true;
 // In order to use the debug mode you need to set the below variable to true
 // and you also need to set the THEME_DEBUG constant in the wp-config to true
 ///
-$debug: true;
+$debug: false;
 
 ///
 // Colors Map for @function color();
