@@ -1,18 +1,57 @@
 .o-col {
-  width: 100%;
-
-  // Small Tablets
-  @include breakpoint(small) {
     float: left;
-    padding-left: grid('gutter');
-    padding-right: grid('gutter');
-  }
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: rem(halve($base-gutter));
+    padding-left: rem(halve($base-gutter));
 }
 
-@include breakpoint(small) {
-  @for $i from 1 through grid('columns') {
+///
+// Create generic columns
+///
+@for $i from 1 through $base-columns {
     .o-col--#{$i} {
-      width: 100% / grid('columns') * $i;
+        width: percentage($i / $base-columns);
     }
-  }
+}
+
+///
+// Create breakpoint based columns
+///
+@each $breakpoint in map-keys($breakpoints) {
+    @include media($breakpoint) {
+        @for $i from 1 through $base-columns {
+            .o-col--#{$i}\@#{$breakpoint} {
+                width: percentage($i / $base-columns);
+            }
+        }
+    }
+}
+
+///
+// Column Offsets
+///
+@if $column-offsets {
+    ///
+    // Create generic column offsets
+    ///
+    @for $i from 1 through $base-columns {
+        .o-col--offset-#{$i} {
+            margin-left: percentage($i / $base-columns);
+        }
+    }
+
+    ///
+    // Create breakpoint based column offsets
+    ///
+    @each $breakpoint in map-keys($breakpoints) {
+        @include media($breakpoint) {
+            @for $i from 1 through $base-columns {
+                .o-col--offset-#{$i}\@#{$breakpoint} {
+                    margin-left: percentage($i / $base-columns);
+                }
+            }
+        }
+    }
 }

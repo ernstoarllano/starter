@@ -1,8 +1,33 @@
-a {
-  color: color('link');
-  text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: rem(30px);
+}
 
-  @include link-states() {
-    text-decoration: underline;
-  }
+h1 {
+    font-size: em(36px);
+}
+
+h2 {
+    font-size: em(30px);
+}
+
+h3 {
+    font-size: em(24px);
+}
+
+h4 {
+    font-size: em(18px);
+}
+
+h5 {
+    font-size: em(14px);
+}
+
+h6 {
+    font-size: em(12px);
 }

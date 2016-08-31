@@ -1,0 +1,17 @@
+///
+/// Returns the number as a negative.
+///
+/// @param {number} $number
+///
+@function neg($number) {
+    @return -($number);
+}
+
+///
+/// Returns number as rounded half the number passed.
+///
+/// @param {number} $number
+///
+@function halve($number) {
+    @return round($number / 2);
+}

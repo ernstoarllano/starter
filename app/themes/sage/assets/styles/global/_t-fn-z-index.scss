@@ -1,0 +1,15 @@
+///
+/// Retrieve z-index value from sass map $z-index
+///
+/// @param {string} $element - Element to return z-index value from $z-index.
+///
+/// @require {variable} $z-index
+///
+@function z($element) {
+    @if map-has-key($z-index, $element) {
+        @return map-get($z-index, $element);
+    } @else {
+        @warn "'#{$element}' does not have a value set in  #{$z-index}.";
+        @return null;
+    }
+}

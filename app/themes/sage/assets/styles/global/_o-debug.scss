@@ -1,0 +1,39 @@
+@if $debug {
+    .o-debug {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: z('debug');
+        width: 100%;
+        height: 100%;
+
+        .o-container {
+            position: relative;
+            min-height: 100%;
+        }
+
+        .o-row {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .o-col {
+            position: relative;
+            height: 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 15px;
+                right: 15px;
+                width: auto;
+                height: inherit;
+                background-color: rgba(alert('info'), 0.25);
+            }
+        }
+    }
+}

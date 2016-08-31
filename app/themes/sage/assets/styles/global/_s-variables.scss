@@ -1,73 +1,95 @@
 ///
-// Grid configuration
+// Breakpoints
 ///
-$grid-config: (
-  columns:    12,
-  gutter:     0.9375rem,
-  max:        75rem
+$breakpoints: (
+    xs: 480px,  // Extra Small devices (landscape phones, 480px and up)
+    sm: 768px,  // Small devices (tablets, 768px and up)
+    md: 1024px, // Medium devices (desktops, 1024px and up)
+    lg: 1200px, // Large devices (desktops, 1200px and up)
+    xl: 1500px  // Extra Lage devices (desktops, 1500px and up)
 );
 
 ///
 // Base global defaults
 ///
-$base-config: (
-  padding:      0.9375rem,
-  font-size:    16px,
-  font-family:  sans-serif,
-  line-height:  1.5
-);
+$base-columns:      12;
+$base-gutter:       30px;
+$base-font-size:    16px;
+$base-line-height:  1.5;
+$base-font-color:   #000000;
 
 ///
-// Breakpoints
+// Column offsets
+//
+// Will enable the creation of column offset classes
 ///
-$breakpoints: (
-  small:  48rem,
-  medium: 62rem,
-  large:  75rem
-);
+$column-offsets: true;
 
 ///
-// Colors
+// Debug mode
+//
+// In order to use the debug mode you need to set the below variable to true
+// and you also need to set the THEME_DEBUG constant in the wp-config to true
+///
+$debug: true;
+
+///
+// Colors Map for @function color();
 ///
 $colors: (
-  body:             #383838,
-  link:             #f66b34,
-  error:            #f2dede,
-  error-message:    #a94442,
-  error-border:     #ebccd1,
-  success:          #dff0d8,
-  success-message:  #3c763d,
-  success-border:   #d6e9c6,
-  info:             #d9edf7,
-  info-message:     #31708f,
-  info-border:      #bce8f1
+    'grey': (
+        'default':    #efefef,
+        'medium':     #e5e5e5
+    )
 );
 
 ///
-// Social Networks
+// Alerts Map for @function alert();
+///
+$alerts: (
+    'success': (
+        'default':  #dff0d8,
+        'message':  #3c763d,
+        'border':   #d6e9c6
+    ),
+    'info': (
+        'default':  #d9edf7,
+        'message':  #31708f,
+        'border':   #bce8f1
+    ),
+    'warning': (
+        'default':  #fcf8e3,
+        'message':  #8a6d3b,
+        'border':   #faf2cc
+    ),
+    'error': (
+        'default':  #f2dede,
+        'message':  #a94442,
+        'border':   #faf2cc
+    )
+);
+
+///
+// Social Networks Map for @function social();
 ///
 $social-networks: (
-  facebook:   #3b5998,
-  twitter:    #00aced,
-  googleplus: #dd4b39,
-  linkedin:   #007bb6,
-  youtube:    #bb0000,
-  instagram:  #517fa4,
-  pinterest:  #cb2027,
-  flickr:     #ff0084,
-  tumblr:     #32506d,
-  foursquare: #0072b1,
-  dribble:    #ea4c89,
-  vine:       #00bf8f
+    facebook:   #3b5998,
+    twitter:    #00aced,
+    googleplus: #dd4b39,
+    linkedin:   #007bb6,
+    youtube:    #bb0000,
+    instagram:  #517fa4,
+    pinterest:  #cb2027,
+    flickr:     #ff0084,
+    tumblr:     #32506d,
+    foursquare: #0072b1,
+    dribble:    #ea4c89,
+    vine:       #00bf8f
 );
 
 ///
 // Z-index Map for @function z();
 ///
 $z-index: (
-
+    debug: 1
 );
-
-///
-// Fonts
-///

@@ -1,3 +1,48 @@
+///
+// CONTENTS
+//
+// SETTINGS
+// Variables.............Global Variables
+//
+// TOOLS
+// Functions
+// Math..................Useful math functions.
+// Z Index...............Track z-index on global scale.
+// Color.................Return colors from maps.
+// Measurement...........Convert measurements to ems or rems.
+//
+// Mixins
+// Clearfix..............Clearfix mixin.
+// Media Queries.........Control Media queries from one place.
+// Grid Framework........Create grid containers and rows.
+// Link States...........Assign content to all link states of parent.
+//
+// GENERIC
+// Box-sizing............Default box sizing.
+// Fonts.................Import fonts.
+//
+// BASE ELEMENTS
+// Page..................Page elements.
+// Type..................Typepography elements.
+// Forms.................Form elements.
+//
+// OBJECTS
+// Debug.................Grid overlay.
+// Container.............Grid containers.
+// Row...................Grid rows.
+// Column................Grid columns.
+//
+// COMPONENTS
+// Buttons...............Button elements.
+// Alerts................Alert elements.
+// Toggle................Toggle elements.
+// Nav...................Navigation elements.
+// Header................Header elements.
+// Hero..................Hero elements.
+// Testimonials..........Testimonails elements.
+// Footer................Footer elements.
+///
+
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 // endbower
@@ -5,43 +50,50 @@
 ///
 // Settings
 ///
-@import "global/_s-variables";
+@import "global/s-variables";
 
 ///
 // Tools
 ///
-@import "global/_t-functions";
-@import "global/_t-mixins";
+@import "global/t-fn-math";
+@import "global/t-fn-measurement";
+@import "global/t-fn-color";
+@import "global/t-fn-z-index";
+@import "global/t-mx-clearfix";
+@import "global/t-mx-media-queries";
+@import "global/t-mx-grid-framework";
+@import "global/t-mx-link-states";
 
 ///
 // Generic
 ///
-@import 'global/_g-border-box';
+@import "global/g-border-box";
+@import "global/g-fonts";
 
 ///
-// Base
+// Base Elements
 ///
-@import "global/_b-page";
-@import "global/_b-type";
-@import "global/_b-forms";
+@import "global/b-page";
+@import "global/b-type";
+@import "global/b-forms";
 
 ///
 // Objects
 ///
-@import "global/_o-container";
-@import "global/_o-row";
-@import "global/_o-col";
+@import "global/o-debug";
+@import "global/o-container";
+@import "global/o-row";
+@import "global/o-col";
 
 ///
 // Components
 ///
-@import "global/_c-buttons";
-@import "global/_c-header";
-@import "global/_c-footer";
-@import "global/_c-main";
-@import "global/_c-wordpress";
-
-///
-// Trumps
-///
-@import "global/_t-overrides";
+@import "global/c-buttons";
+@import "global/c-alerts";
+@import "global/c-toggle";
+@import "global/c-nav";
+@import "global/c-header";
+//@import "global/c-hero";
+@import "global/c-content";
+//@import "global/c-testimonials";
+@import "global/c-footer";
