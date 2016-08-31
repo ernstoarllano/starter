@@ -7,21 +7,26 @@
 
 ## Installation
 
-1. Download the latest zip of this repo or `git clone` the repo.
+1. Create a directory for your project and switch into it.
+`mkdir project-folder && cd project-folder`.
 
-  `git clone git@github.com:ernstoarllano/starter.git`
+2. Clone the repo into your project directory.
+`git clone git@github.com:ernstoarllano/starter.git .`.
 
-2. `cd` into the project folder and install the Composer packages `composer install`, this may take a minute or two.
+3. Remove the existing git branch.
+`rm -rf .git`.
 
-3. Configure the `wp-config.php`.
+4. Install the required Composer packages with `composer install`, this may take a minute or two.
 
-4. Access the WP admin at `http://example.com/wp/wp-admin` and configure your site.
+5. Configure the `wp-config.php`.
 
-5. If you have [WP-CLI](http://wp-cli.org) activate the theme with `wp theme activate sage` otherwise activate the theme in the WP backend.
+6. Access the WP admin at `http://example.com/wp/wp-admin` and configure your site. Be sure to remove the `/wp` portion from the Site Address (URL) in the Settings->General options.
 
-6. `cd` into the Sage theme, `app/themes/sage/` and proceed with [configuring Sage](https://github.com/roots/sage#theme-installation)
+7. Before activating the Sage theme you need to install it's Composer packages so switch into the theme `cd app/themes/sage/` and install the packages `composer install`, this may take a minute or two.
 
-7. Build shit.
+8. Now you need to install the necessary Sage node packages with `npm install`, this may take a minute or two.
+
+9. If you have [WP-CLI](http://wp-cli.org) activate the theme with `wp theme activate sage` otherwise activate the theme in the WP backend.
 
 ## Documentation
 
