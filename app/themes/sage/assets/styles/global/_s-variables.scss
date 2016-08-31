@@ -15,6 +15,7 @@ $breakpoints: (
 $base-columns:      12;
 $base-gutter:       30px;
 $base-font-size:    16px;
+$base-font-family:  sans-serif;
 $base-line-height:  1.5;
 $base-font-color:   #000000;
 
@@ -31,7 +32,7 @@ $column-offsets: true;
 // In order to use the debug mode you need to set the below variable to true
 // and you also need to set the THEME_DEBUG constant in the wp-config to true
 ///
-$debug: false;
+$debug: true;
 
 ///
 // Colors Map for @function color();

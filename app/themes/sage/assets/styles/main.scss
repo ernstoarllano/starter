@@ -37,6 +37,7 @@
 // Alerts................Alert elements.
 // Toggle................Toggle elements.
 // Nav...................Navigation elements.
+// Logo..................Logo elements.
 // Header................Header elements.
 // Hero..................Hero elements.
 // Testimonials..........Testimonails elements.
@@ -89,9 +90,10 @@
 // Components
 ///
 @import "global/c-buttons";
-@import "global/c-alerts";
+//@import "global/c-alerts";
 @import "global/c-toggle";
 @import "global/c-nav";
+@import "global/c-logo";
 @import "global/c-header";
 //@import "global/c-hero";
 @import "global/c-content";
