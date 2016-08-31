@@ -10,6 +10,7 @@
 !index.php
 !wp-cli.yml
 !wp-config.php
+!README.md
 
 #################
 ## Ignore everything in the "app" directory, except the "plugins" and "themes" directories.
