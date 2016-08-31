@@ -136,6 +136,9 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
+/** Enable theme debug mode **/
+define('THEME_DEBUG', false);
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
