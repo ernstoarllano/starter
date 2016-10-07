@@ -9,10 +9,10 @@
       "package": {
         "name": "wordpress/wordpress",
         "type": "webroot",
-        "version": "4.6",
+        "version": "4.6.1",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/4.6.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/4.6.1.zip"
         },
         "require": {
           "fancyguy/webroot-installer": "1.1.0"
@@ -21,7 +21,7 @@
     }
   ],
   "require": {
-    "wordpress/wordpress": "4.6",
+    "wordpress/wordpress": "4.6.1",
     "fancyguy/webroot-installer": "1.1.0",
     "wpackagist-plugin/autodescription": "2.*",
     "wpackagist-plugin/configure-smtp": "3.*",
