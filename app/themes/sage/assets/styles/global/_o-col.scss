@@ -7,6 +7,10 @@
     padding-left: rem(halve($base-gutter));
 }
 
+.o-col__inner {
+    width: 100%;
+}
+
 ///
 // Create generic columns
 ///

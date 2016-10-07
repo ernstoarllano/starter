@@ -1,0 +1,37 @@
+{
+    "dependencies": {
+        "main.js": {
+            "files": [
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "normalize.css": {
+            "files": [
+                "styles/normalize.scss"
+            ]
+        },
+        "main.css": {
+            "files": [
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "admin.css": {
+            "files": [
+                "styles/admin.scss"
+            ]
+        },
+        "customizer.js": {
+            "files": [
+                "scripts/customizer.js"
+            ]
+        },
+        "jquery.js": {
+            "bower": ["jquery"]
+        }
+    },
+    "config": {
+        "devUrl": "http://sage8.dev"
+    }
+}

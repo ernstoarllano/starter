@@ -16,6 +16,7 @@
 // Media Queries.........Control Media queries from one place.
 // Grid Framework........Create grid containers and rows.
 // Link States...........Assign content to all link states of parent.
+// Font Size.............Control Font Sizes in an easy way.
 //
 // GENERIC
 // Box-sizing............Default box sizing.
@@ -25,6 +26,7 @@
 // Page..................Page elements.
 // Type..................Typepography elements.
 // Forms.................Form elements.
+// Image.................Image tag.
 //
 // OBJECTS
 // Debug.................Grid overlay.
@@ -64,6 +66,7 @@
 @import "global/t-mx-media-queries";
 @import "global/t-mx-grid-framework";
 @import "global/t-mx-link-states";
+@import "global/t-mx-font-size";
 
 ///
 // Generic
@@ -74,9 +77,10 @@
 ///
 // Base Elements
 ///
-@import "global/b-page";
-@import "global/b-type";
-@import "global/b-forms";
+@import "global/e-page";
+@import "global/e-type";
+@import "global/e-forms";
+@import "global/e-images";
 
 ///
 // Objects
@@ -95,7 +99,7 @@
 @import "global/c-nav";
 @import "global/c-logo";
 @import "global/c-header";
-//@import "global/c-hero";
+@import "global/c-hero";
 @import "global/c-content";
 //@import "global/c-testimonials";
 @import "global/c-footer";

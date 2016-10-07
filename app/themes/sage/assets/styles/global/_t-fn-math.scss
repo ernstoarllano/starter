@@ -15,3 +15,12 @@
 @function halve($number) {
     @return round($number / 2);
 }
+
+///
+/// Returns number as rounded quarter the number passed.
+///
+/// @param {number} $number
+///
+@function quarter($number) {
+    @return round($number / 4);
+}
