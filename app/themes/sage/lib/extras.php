@@ -88,7 +88,7 @@ function column($atts, $content = null)
   extract(shortcode_atts([
     'columns' => 'Columns',
   ], $atts));
-  return '<div class="o-col o-col--'.$columns.'">'.do_shortcode($content).'</div>';
+  return '<div class="o-col o-col--'.$columns.'@md">'.do_shortcode($content).'</div>';
 }
 add_shortcode('column', __NAMESPACE__ . '\\column');
 
@@ -142,7 +142,7 @@ function numbered_pagination()
     foreach ($pagination as $page) {
         $output .= '<li class="c-post__nav-item">'.$page.'</li>';
     }
-    
+
     return $output .= ' </ol>
                        </nav>';
   }

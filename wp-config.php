@@ -49,7 +49,7 @@ define('DISALLOW_FILE_EDIT', true);
  * 	development - For local development
  *	production - For live site
  */
-define('WP_ENV', '');
+define('WP_ENV', 'development');
 
 // Switch MySQL settings based on environment
 switch(WP_ENV){

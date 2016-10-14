@@ -22,6 +22,11 @@
                 "styles/admin.scss"
             ]
         },
+        "tinymce.css": {
+            "files": [
+                "styles/tinymce.scss"
+            ]
+        },
         "customizer.js": {
             "files": [
                 "scripts/customizer.js"
@@ -32,6 +37,6 @@
         }
     },
     "config": {
-        "devUrl": "http://sage8.dev"
+        "devUrl": "http://example.dev"
     }
 }

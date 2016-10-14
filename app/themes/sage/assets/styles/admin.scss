@@ -8,3 +8,88 @@
 @import "global/t-mx-grid-framework";
 @import "global/t-mx-link-states";
 @import "global/t-mx-font-size";
+
+body {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+}
+
+.login {
+    h1 a {
+        width: 100%;
+        background-size: 100%;
+    }
+
+    form {
+        box-shadow: none;
+    }
+
+    label {
+        font-size: em(14px);
+        color: white;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: rem(10px);
+        font-size: em(16px, 14px);
+        border: 0;
+        box-shadow: none;
+        appearance: none;
+    }
+
+    input[type="checkbox"] {
+        color: $base-font-color;
+        background-color: white;
+        border: 0;
+        box-shadow: none;
+
+        &:checked:before {
+
+        }
+    }
+
+    .message {
+        margin-bottom: rem(30px);
+        padding: rem(halve($base-gutter));
+        color: alert('info', 'message');
+        background-color: alert('info');
+        border: 1px solid alert('info', 'border');
+        box-shadow: none;
+    }
+
+    #nav,
+    #backtoblog {
+        font-size: em(14px);
+
+        a {
+            color: inherit;
+
+            @include link-states() {
+            }
+        }
+    }
+
+    #login_error {
+        margin-bottom: rem(30px);
+        padding: rem(halve($base-gutter));
+        color: alert('error', 'message');
+        background-color: alert('error');
+        border: 1px solid alert('error', 'border');
+        box-shadow: none;
+    }
+}
+
+.wp-core-ui {
+    .button-primary {
+        text-shadow: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+
+        @include link-states() {
+            border: 0;
+            box-shadow: none;
+        }
+    }
+}

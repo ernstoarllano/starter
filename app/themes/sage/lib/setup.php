@@ -47,7 +47,7 @@ function setup()
 
     // Use main stylesheet for visual editor
     // To add custom styles edit /assets/styles/layouts/_tinymce.scss
-    add_editor_style(Assets\asset_path('styles/main.css'));
+    add_editor_style(Assets\asset_path('styles/tinymce.css'));
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
@@ -68,13 +68,29 @@ function widgets_init()
     register_sidebar([
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer',
-        'before_widget' => '<section class="widget %1$s %2$s">',
+        'before_widget' => '<section class="c-footer__block %1$s %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'before_title'  => '<h6 class="c-footer__block__title">',
+        'after_title'   => '</h6>'
     ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+
+/**
+ * Determine which pages should NOT use the default content layout
+ */
+function display_content()
+{
+    static $display;
+
+    isset($display) || $display = !in_array(true, [
+        // The default content layout will NOT be displayed if Any of the following return true.
+        // @link https://codex.wordpress.org/Conditional_Tags
+        is_front_page()
+    ]);
+
+    return apply_filters('sage/display_content', $display);
+}
 
 /**
  * Determine which pages should NOT display the sidebar
@@ -88,6 +104,7 @@ function display_sidebar()
         // @link https://codex.wordpress.org/Conditional_Tags
         is_404(),
         is_front_page(),
+        is_page(),
         is_page_template('template-custom.php'),
     ]);
 

@@ -34,6 +34,9 @@
 // Row...................Grid rows.
 // Column................Grid columns.
 //
+// UTILITIES
+// Text..................Text utilities.
+//
 // COMPONENTS
 // Buttons...............Button elements.
 // Alerts................Alert elements.
@@ -42,8 +45,11 @@
 // Logo..................Logo elements.
 // Header................Header elements.
 // Hero..................Hero elements.
-// Testimonials..........Testimonails elements.
+// WordPress.............WordPress elements.
 // Footer................Footer elements.
+//
+// TRUMPS
+// Overrides.............Override elements.
 ///
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -91,6 +97,11 @@
 @import "global/o-col";
 
 ///
+// Utilities
+///
+@import "global/u-text";
+
+///
 // Components
 ///
 @import "global/c-buttons";
@@ -101,5 +112,10 @@
 @import "global/c-header";
 @import "global/c-hero";
 @import "global/c-content";
-//@import "global/c-testimonials";
+@import "global/c-wordpress";
 @import "global/c-footer";
+
+///
+// Trumps
+///
+@import "global/t-overrides";
