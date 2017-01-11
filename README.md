@@ -22,7 +22,7 @@
 
 6. Access the WP admin at `http://example.com/wp/wp-admin` and configure your site. Be sure to remove the `/wp` portion from the Site Address (URL) in the Settings->General options.
 
-7. Now you need to install the necessary Sage node packages with `npm install`, this may take a minute or two.
+7. Now you need to install the necessary Sage node packages with `npm install`, this may take a minute or two. You'll also need to install the necessary Bower packages with `bower install`. You can run both of the install scripts independently or combine both at the same time like so `npm install && bower install`.
 
 8. If you have [WP-CLI](http://wp-cli.org) activate the theme with `wp theme activate sage` otherwise activate the theme in the WP backend.
 
