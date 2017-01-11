@@ -22,11 +22,9 @@
 
 6. Access the WP admin at `http://example.com/wp/wp-admin` and configure your site. Be sure to remove the `/wp` portion from the Site Address (URL) in the Settings->General options.
 
-7. Before activating the Sage theme you need to install it's Composer packages so switch into the theme `cd app/themes/sage/` and install the packages `composer install`, this may take a minute or two.
+7. Now you need to install the necessary Sage node packages with `npm install`, this may take a minute or two.
 
-8. Now you need to install the necessary Sage node packages with `npm install`, this may take a minute or two.
-
-9. If you have [WP-CLI](http://wp-cli.org) activate the theme with `wp theme activate sage` otherwise activate the theme in the WP backend.
+8. If you have [WP-CLI](http://wp-cli.org) activate the theme with `wp theme activate sage` otherwise activate the theme in the WP backend.
 
 ## Documentation
 
