@@ -14,6 +14,13 @@
  * @package WordPress
  */
 
+/*
+ * Compression
+ */
+define('COMPRESS_SCRIPTS', true);
+define('COMPRESS_CSS', true);
+define('ENFORCE_GZIP', true);
+
 /**
  * Disable automatic update
  *
