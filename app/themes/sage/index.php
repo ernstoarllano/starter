@@ -1,7 +1,7 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
-    <div class="c-alert c-alert--error">
+    <div class="alert alert--error">
         <?php _e('Sorry, no results were found.', 'sage'); ?>
     </div>
 <?php endif; ?>

@@ -18,14 +18,14 @@ use Roots\Sage\Wrapper;
         get_template_part('templates/header');
     ?>
     <?php if (Setup\display_content()) : ?>
-        <div class="c-content c-content--main">
-            <div class="o-container">
+        <div class="content content--main">
+            <div class="container">
                 <?php if (Setup\display_sidebar()) : ?>
-                    <div class="o-row">
-                        <div class="o-col o-col--8@md">
+                    <div class="row">
+                        <div class="col col--8@md">
                             <?php include Wrapper\template_path(); ?>
                         </div>
-                        <div class="o-col o-col--4@md">
+                        <div class="col col--4@md">
                             <?php include Wrapper\sidebar_path(); ?>
                         </div>
                     </div>

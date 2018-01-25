@@ -3,11 +3,11 @@
         // Number of columns we want to create
         $columns = 12;
     ?>
-    <div class="o-debug">
-        <div class="o-container">
-            <div class="o-row">
+    <div class="debug">
+        <div class="container">
+            <div class="row">
                 <?php for ($i = 0; $i < $columns; ++$i) { ?>
-                    <div class="o-col o-col--1"></div>
+                    <div class="col col--1"></div>
                 <?php } ?>
             </div>
         </div>
