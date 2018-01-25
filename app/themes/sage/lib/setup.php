@@ -116,7 +116,6 @@ function display_sidebar()
  */
 function assets()
 {
-    wp_enqueue_style('sage/normalize', Assets\asset_path('styles/normalize.css'), false, null);
     wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
     //wp_enqueue_style('sage/shame_css', get_stylesheet_directory_uri().'/shame/shame.css', false, null);
 

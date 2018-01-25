@@ -1,0 +1,14 @@
+// Row
+//
+// Use this class for the row object.
+//
+// Markup:
+// <div class="row">Row</div>
+//
+// Modifier:
+// <div class="row row--flex">Container</div>
+//
+
+.row {
+    @include make-row;
+}

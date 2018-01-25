@@ -6,11 +6,6 @@
             ],
             "main": true
         },
-        "normalize.css": {
-            "files": [
-                "styles/normalize.scss"
-            ]
-        },
         "main.css": {
             "files": [
                 "styles/main.scss"
@@ -33,7 +28,9 @@
             ]
         },
         "jquery.js": {
-            "bower": ["jquery"]
+            "bower": [
+                "jquery"
+            ]
         }
     },
     "config": {

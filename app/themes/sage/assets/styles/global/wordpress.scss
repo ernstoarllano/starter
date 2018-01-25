@@ -1,0 +1,103 @@
+// WordPress Image Align Classes
+//
+// Use these classes for image alignment.
+//
+// Markup:
+// <img class="alignnone">
+//
+
+.alignnone,
+.alignleft,
+.alignright,
+.aligncenter {
+    // Medium Max Desktops
+    @include media-max(md) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: rem($base-gutter);
+    }
+}
+
+.alignleft,
+.alignright {
+    margin-bottom: rem(20px);
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    // Medium Desktops
+    @include media(md) {
+        float: left;
+        margin-right: rem(20px);
+    }
+}
+
+.alignright {
+    // Medium Desktops
+    @include media(md) {
+        float: right;
+        margin-left: rem(20px);
+    }
+}
+
+// WordPress Gallery Classes
+//
+// Use this class for the toggle component.
+//
+// Markup:
+//
+
+.gallery-columns-2,
+.gallery-columns-3,
+.gallery-columns-4,
+.gallery-columns-5 {
+    @include make-row;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    margin-bottom: rem($base-gutter);
+    padding-left: rem(halve($base-gutter));
+    padding-right: rem(halve($base-gutter));
+
+    // Medium Desktops
+    @include media(md) {
+        float: left;
+    }
+
+    .gallery-columns-2 & {
+        // Medium Desktops
+        @include media(md) {
+            width: 50%;
+        }
+    }
+
+    .gallery-columns-3 & {
+        // Medium Desktops
+        @include media(md) {
+            width: 33.3333333333%;
+        }
+    }
+
+    .gallery-columns-4 & {
+        // Medium Desktops
+        @include media(md) {
+            width: 25%;
+        }
+    }
+
+    .gallery-columns-5 & {
+        // Medium Desktops
+        @include media(md) {
+            width: 20%;
+        }
+    }
+}

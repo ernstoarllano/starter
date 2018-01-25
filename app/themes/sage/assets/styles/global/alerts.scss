@@ -1,28 +1,39 @@
-.c-alert {
+// Alert
+//
+// Use these classes for the alert component.
+//
+// Markup:
+// <div class="alert">Alert Message</div>
+//
+// Modifier:
+// <div class="alert alert--success">Success Alert Message</div>
+//
+
+.alert {
     margin-bottom: rem(30px);
     padding: rem(halve($base-gutter));
     border: 1px solid transparent;
 }
 
-.c-alert--success {
+.alert--success {
     color: alert('success', 'message');
     background-color: alert('success');
     border-color: alert('success', 'border');
 }
 
-.c-alert--info {
+.alert--info {
     color: alert('info', 'message');
     background-color: alert('info');
     border-color: alert('info', 'border');
 }
 
-.c-alert--warning {
+.alert--warning {
     color: alert('warning', 'message');
     background-color: alert('warning');
     border-color: alert('warning', 'border');
 }
 
-.c-alert--error {
+.alert--error {
     color: alert('error', 'message');
     background-color: alert('error');
     border-color: alert('error', 'border');

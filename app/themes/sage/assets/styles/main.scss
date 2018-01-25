@@ -19,6 +19,7 @@
 // Font Size.............Control Font Sizes in an easy way.
 //
 // GENERIC
+// Normalize.............Normalize styling.
 // Box-sizing............Default box sizing.
 // Fonts.................Import fonts.
 //
@@ -36,6 +37,7 @@
 //
 // UTILITIES
 // Text..................Text utilities.
+// WordPress.............WordPress elements.
 //
 // COMPONENTS
 // Buttons...............Button elements.
@@ -45,7 +47,6 @@
 // Logo..................Logo elements.
 // Header................Header elements.
 // Hero..................Hero elements.
-// WordPress.............WordPress elements.
 // Footer................Footer elements.
 //
 // TRUMPS
@@ -59,63 +60,64 @@
 ///
 // Settings
 ///
-@import "global/s-variables";
+@import "global/variables";
 
 ///
 // Tools
 ///
-@import "global/t-fn-math";
-@import "global/t-fn-measurement";
-@import "global/t-fn-color";
-@import "global/t-fn-z-index";
-@import "global/t-mx-clearfix";
-@import "global/t-mx-media-queries";
-@import "global/t-mx-grid-framework";
-@import "global/t-mx-link-states";
-@import "global/t-mx-font-size";
+@import "global/fn-math";
+@import "global/fn-measurement";
+@import "global/fn-color";
+@import "global/fn-z-index";
+@import "global/mx-clearfix";
+@import "global/mx-media-queries";
+@import "global/mx-grid-framework";
+@import "global/mx-link-states";
+@import "global/mx-font-size";
 
 ///
 // Generic
 ///
-@import "global/g-border-box";
-@import "global/g-fonts";
+@import "global/normalize";
+@import "global/border-box";
+@import "global/fonts";
 
 ///
 // Base Elements
 ///
-@import "global/e-page";
-@import "global/e-type";
-@import "global/e-forms";
-@import "global/e-images";
+@import "global/page";
+@import "global/type";
+@import "global/forms";
+@import "global/images";
 
 ///
 // Objects
 ///
-@import "global/o-debug";
-@import "global/o-container";
-@import "global/o-row";
-@import "global/o-col";
+@import "global/debug";
+@import "global/container";
+@import "global/row";
+@import "global/col";
 
 ///
 // Utilities
 ///
-@import "global/u-text";
+@import "global/text";
+@import "global/wordpress";
 
 ///
 // Components
 ///
-@import "global/c-buttons";
-@import "global/c-alerts";
-@import "global/c-toggle";
-@import "global/c-nav";
-@import "global/c-logo";
-@import "global/c-header";
-@import "global/c-hero";
-@import "global/c-content";
-@import "global/c-wordpress";
-@import "global/c-footer";
+@import "global/alerts";
+@import "global/buttons";
+@import "global/toggle";
+@import "global/logo";
+@import "global/nav";
+@import "global/header";
+@import "global/hero";
+@import "global/content";
+@import "global/footer";
 
 ///
 // Trumps
 ///
-@import "global/t-overrides";
+@import "global/overrides";

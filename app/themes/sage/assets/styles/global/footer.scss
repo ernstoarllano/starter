@@ -1,0 +1,13 @@
+// Footer
+//
+// Use this class for the footer component.
+//
+// Markup:
+// <div class="footer">Footer</div>
+// <section class="footer">Footer</section>
+// <footer class="footer">Footer</footer>
+//
+.footer {
+    padding-top: rem($base-gutter);
+    padding-bottom: rem($base-gutter);
+}

@@ -1,13 +1,13 @@
-@import "global/s-variables";
-@import "global/t-fn-math";
-@import "global/t-fn-measurement";
-@import "global/t-fn-color";
-@import "global/t-fn-z-index";
-@import "global/t-mx-clearfix";
-@import "global/t-mx-media-queries";
-@import "global/t-mx-grid-framework";
-@import "global/t-mx-link-states";
-@import "global/t-mx-font-size";
+@import "global/variables";
+@import "global/fn-math";
+@import "global/fn-measurement";
+@import "global/fn-color";
+@import "global/fn-z-index";
+@import "global/mx-clearfix";
+@import "global/mx-media-queries";
+@import "global/mx-grid-framework";
+@import "global/mx-link-states";
+@import "global/mx-font-size";
 
 body {
     font-size: $base-font-size;
