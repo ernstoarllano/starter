@@ -72,7 +72,7 @@ add_filter('login_headerurl', __NAMESPACE__ . '\\login_url');
  */
 function row($atts, $content = null)
 {
-  return '<div class="o-row">'.do_shortcode($content).'</div>';
+  return '<div class="row">'.do_shortcode($content).'</div>';
 }
 add_shortcode('row', __NAMESPACE__ . '\\row');
 
@@ -88,7 +88,7 @@ function column($atts, $content = null)
   extract(shortcode_atts([
     'columns' => 'Columns',
   ], $atts));
-  return '<div class="o-col o-col--'.$columns.'@md">'.do_shortcode($content).'</div>';
+  return '<div class="col col--'.$columns.'@md">'.do_shortcode($content).'</div>';
 }
 add_shortcode('column', __NAMESPACE__ . '\\column');
 
@@ -101,7 +101,7 @@ add_shortcode('column', __NAMESPACE__ . '\\column');
  */
 function column_inner($atts, $content = null)
 {
-  return '<div class="o-col__inner">'.do_shortcode($content).'</div>';
+  return '<div class="col__inner">'.do_shortcode($content).'</div>';
 }
 add_shortcode('inner', __NAMESPACE__ . '\\column_inner');
 
@@ -136,11 +136,11 @@ function numbered_pagination()
 
   if (is_array($pagination)) {
     $paged  = (get_query_var('paged') == 0) ? 1 : get_query_var('paged');
-    $output = '<nav class="c-post__nav">
-                <ol class="c-post__nav-list">';
+    $output = '<nav class="nav nav--pagination">
+                <ol class="nav__list">';
 
     foreach ($pagination as $page) {
-        $output .= '<li class="c-post__nav-item">'.$page.'</li>';
+        $output .= '<li class="nav__item">'.$page.'</li>';
     }
 
     return $output .= ' </ol>
@@ -172,3 +172,36 @@ function image_tag($html, $id, $alt, $title, $align, $size)
  *
  * e.g. add_image_size('w800x400', 800, 400, true)
  */
+
+$custom_sizes = [
+    
+];
+
+if (!empty($custom_sizes)) {
+    foreach ($custom_sizes as $key => $custom_size) {
+        add_image_size($key, $custom_size[0], $custom_size[1], $custom_size[2]);
+    }
+}
+
+/**
+ * Recreate default filters to pull formatted content with get_post_meta
+ */
+add_filter('meta_content', 'wptexturize');
+add_filter('meta_content', 'convert_smilies');
+add_filter('meta_content', 'convert_chars');
+add_filter('meta_content', 'wpautop');
+add_filter('meta_content', 'shortcode_unautop');
+add_filter('meta_content', 'prepend_attachment');
+
+/**
+ * ACF Options Page
+ */
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page([
+        'page_title' => 'Global Info',
+        'menu_title' => 'Global Info',
+        'menu_slug'  => 'global-info',
+        'capability' => 'edit_posts',
+        'redirect'   => false
+    ]);
+}
