@@ -127,3 +127,20 @@ function assets()
     //wp_enqueue_script('sage/shame_js', get_stylesheet_directory_uri().'/shame/shame.js', ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+/**
+ * Defer JavaScript files
+ */
+function defer_scripts($tag, $handle, $src)
+{
+    $scripts = [
+        'sage/js'
+    ];
+
+    if (in_array($handle, $scripts)) {
+        return '<script src="'.$src.'" defer="defer"></script>'; 
+    }
+
+    return $tag;
+}
+add_action('script_loader_tag', __NAMESPACE__ . '\\defer_scripts', 10, 3);
