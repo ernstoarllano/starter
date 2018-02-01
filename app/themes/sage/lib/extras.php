@@ -186,6 +186,25 @@ if (!empty($custom_sizes)) {
 }
 
 /**
+ * Add custom image sizes to media library
+ * 
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/image_size_names_choose
+ * @param array $sizes
+ */
+function media_uploader_sizes($sizes)
+{
+
+  $addsizes = [
+    'w1920x549' => __('Example')
+  ];
+
+  $newsizes = array_merge($sizes, $addsizes);
+
+  return $newsizes;
+}
+//add_filter('image_size_names_choose', __NAMESPACE__ . '\\media_uploader_sizes');
+
+/**
  * Recreate default filters to pull formatted content with get_post_meta
  */
 add_filter('meta_content', 'wptexturize');
