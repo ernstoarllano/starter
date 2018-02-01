@@ -10,31 +10,31 @@
 //
 
 .alert {
-    margin-bottom: rem(30px);
-    padding: rem(halve($base-gutter));
-    border: 1px solid transparent;
+  margin-bottom: rem(30px);
+  padding: rem(halve($base-gutter));
+  border: 1px solid transparent;
 }
 
 .alert--success {
-    color: alert('success', 'message');
-    background-color: alert('success');
-    border-color: alert('success', 'border');
+  color: alert('success', 'message');
+  background-color: alert('success');
+  border-color: alert('success', 'border');
 }
 
 .alert--info {
-    color: alert('info', 'message');
-    background-color: alert('info');
-    border-color: alert('info', 'border');
+  color: alert('info', 'message');
+  background-color: alert('info');
+  border-color: alert('info', 'border');
 }
 
 .alert--warning {
-    color: alert('warning', 'message');
-    background-color: alert('warning');
-    border-color: alert('warning', 'border');
+  color: alert('warning', 'message');
+  background-color: alert('warning');
+  border-color: alert('warning', 'border');
 }
 
 .alert--error {
-    color: alert('error', 'message');
-    background-color: alert('error');
-    border-color: alert('error', 'border');
+  color: alert('error', 'message');
+  background-color: alert('error');
+  border-color: alert('error', 'border');
 }

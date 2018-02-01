@@ -6,10 +6,10 @@
 /// @require {variable} $z-index
 ///
 @function z($element) {
-    @if map-has-key($z-index, $element) {
-        @return map-get($z-index, $element);
-    } @else {
-        @warn "'#{$element}' does not have a value set in  #{$z-index}.";
-        @return null;
-    }
+  @if map-has-key($z-index, $element) {
+    @return map-get($z-index, $element);
+  } @else {
+    @warn "'#{$element}' does not have a value set in  #{$z-index}.";
+    @return null;
+  }
 }

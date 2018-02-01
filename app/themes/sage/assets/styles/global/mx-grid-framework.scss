@@ -2,11 +2,11 @@
 // Create container
 ///
 @mixin make-container($gutter: $base-gutter) {
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: rem(halve($gutter));
-    padding-right: rem(halve($gutter));
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem(halve($gutter));
+  padding-right: rem(halve($gutter));
 }
 
 ///

@@ -4,44 +4,44 @@
 ///
 @mixin font-size($size) {
 
-    @if map-has-key($font-sizes, $size) {
+  @if map-has-key($font-sizes, $size) {
 
-        $font-size: map-get($font-sizes, $size);
+    $font-size: map-get($font-sizes, $size);
 
-        @if type-of($font-size) == 'number' {
+    @if type-of($font-size) == 'number' {
 
-            font-size: em(map-get($font-sizes, $size));
+      font-size: em(map-get($font-sizes, $size));
 
-        } @elseif type-of($font-size) == 'map' {
+    } @elseif type-of($font-size) == 'map' {
 
-            font-size: em(map-get($font-size, 'initial'));
+      font-size: em(map-get($font-size, 'initial'));
 
-            @each $key, $value in $font-size {
+      @each $key, $value in $font-size {
 
-                @if $key != 'initial' {
+        @if $key != 'initial' {
 
-                    @include media(#{$key}) {
+          @include media(#{$key}) {
 
-                        font-size: em($value);
+            font-size: em($value);
 
-                    }
-
-                }
-
-            }
-
-        } @else {
-
-            @warn "`#{$size}` must be a string or map";
-            @return null;
+          }
 
         }
 
+      }
+
     } @else {
 
-        @warn "`#{$size}` does not have a value set in $font-sizes. (#{map-keys($font-sizes)})";
-        @return null;
+      @warn "`#{$size}` must be a string or map";
+      @return null;
 
     }
+
+  } @else {
+
+    @warn "`#{$size}` does not have a value set in $font-sizes. (#{map-keys($font-sizes)})";
+    @return null;
+
+  }
 
 }

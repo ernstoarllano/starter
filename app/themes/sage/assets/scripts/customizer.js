@@ -1,7 +1,7 @@
-(function($) {
+(function ($) {
   // Site title
-  wp.customize('blogname', function(value) {
-    value.bind(function(to) {
+  wp.customize('blogname', function (value) {
+    value.bind(function (to) {
       $('.brand').text(to);
     });
   });

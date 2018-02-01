@@ -7,12 +7,12 @@
 /// @require {variable} $base-config
 ///
 @function em($px, $base: $base-font-size) {
-    @if type-of($px) == 'number' and not unitless($px) {
-        @return ($px / $base) * 1em;
-    } @else {
-        @warn '`em()` requires a number in `px` units.';
-        @return null;
-    }
+  @if type-of($px) == 'number' and not unitless($px) {
+    @return ($px / $base) * 1em;
+  } @else {
+    @warn '`em()` requires a number in `px` units.';
+    @return null;
+  }
 }
 
 ///
@@ -24,10 +24,10 @@
 /// @require {variable} $base-config
 ///
 @function rem($px, $base: $base-font-size) {
-    @if type-of($px) == 'number' and not unitless($px) {
-        @return ($px / $base) * 1rem;
-    } @else {
-        @warn '`rem()` requires a number in `px` units.';
-        @return null;
-    }
+  @if type-of($px) == 'number' and not unitless($px) {
+    @return ($px / $base) * 1rem;
+  } @else {
+    @warn '`rem()` requires a number in `px` units.';
+    @return null;
+  }
 }

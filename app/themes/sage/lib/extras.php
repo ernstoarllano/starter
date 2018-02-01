@@ -12,19 +12,19 @@ use Roots\Sage\Assets;
  */
 function body_class($classes)
 {
-    // Add page slug if it doesn't exist
-    if (is_single() || is_page() && !is_front_page()) {
-        if (!in_array(basename(get_permalink()), $classes)) {
-            $classes[] = basename(get_permalink());
-        }
+  // Add page slug if it doesn't exist
+  if (is_single() || is_page() && !is_front_page()) {
+    if (!in_array(basename(get_permalink()), $classes)) {
+      $classes[] = basename(get_permalink());
     }
+  }
 
-    // Add class if sidebar is active
-    if (Setup\display_sidebar()) {
-        $classes[] = 'sidebar-primary';
-    }
+  // Add class if sidebar is active
+  if (Setup\display_sidebar()) {
+    $classes[] = 'sidebar-primary';
+  }
 
-    return $classes;
+  return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
 
@@ -35,7 +35,7 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  */
 function excerpt_more()
 {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
@@ -46,9 +46,9 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  */
 function admin_styles()
 {
-    if (in_array($GLOBALS['pagenow'], ['wp-login.php','wp-register.php'])) {
-        wp_enqueue_style('sage/admin', Assets\asset_path('styles/admin.css'), false, null);
-    }
+  if (in_array($GLOBALS['pagenow'], ['wp-login.php','wp-register.php'])) {
+    wp_enqueue_style('sage/admin', Assets\asset_path('styles/admin.css'), false, null);
+  }
 }
 add_action('login_head', __NAMESPACE__ . '\\admin_styles');
 
@@ -59,7 +59,7 @@ add_action('login_head', __NAMESPACE__ . '\\admin_styles');
  */
 function login_url()
 {
-    return get_home_url();
+  return get_home_url();
 }
 add_filter('login_headerurl', __NAMESPACE__ . '\\login_url');
 
@@ -140,7 +140,7 @@ function numbered_pagination()
                 <ol class="nav__list">';
 
     foreach ($pagination as $page) {
-        $output .= '<li class="nav__item">'.$page.'</li>';
+      $output .= '<li class="nav__item">'.$page.'</li>';
     }
 
     return $output .= ' </ol>
@@ -158,10 +158,12 @@ function numbered_pagination()
  */
 function image_tag($html, $id, $alt, $title, $align, $size)
 {
-    list($img_src) = image_downsize($id, $size);
-    $class = 'align'.esc_attr($align).' size-'.esc_attr($size).' wp-image-'.$id;
-    $class = apply_filters('get_image_tag_class', $class, $id, $align, $size);
-    return '<img src="'.get_stylesheet_directory_uri().'/dist/images/loading.gif" data-src="'.esc_attr($img_src).'" alt="'.esc_attr($alt).'" class="'.$class.'" />';
+  list($img_src) = image_downsize($id, $size);
+  
+  $class = 'align'.esc_attr($align).' size-'.esc_attr($size).' wp-image-'.$id;
+  $class = apply_filters('get_image_tag_class', $class, $id, $align, $size);
+    
+  return '<img src="'.get_stylesheet_directory_uri().'/dist/images/loading.gif" data-src="'.esc_attr($img_src).'" alt="'.esc_attr($alt).'" class="'.$class.'" />';
 }
 //add_filter('get_image_tag', __NAMESPACE__ . '\\image_tag', 10, 6);
 
@@ -178,9 +180,9 @@ $custom_sizes = [
 ];
 
 if (!empty($custom_sizes)) {
-    foreach ($custom_sizes as $key => $custom_size) {
-        add_image_size($key, $custom_size[0], $custom_size[1], $custom_size[2]);
-    }
+  foreach ($custom_sizes as $key => $custom_size) {
+    add_image_size($key, $custom_size[0], $custom_size[1], $custom_size[2]);
+  }
 }
 
 /**
@@ -197,11 +199,11 @@ add_filter('meta_content', 'prepend_attachment');
  * ACF Options Page
  */
 if (function_exists('acf_add_options_page')) {
-    acf_add_options_page([
-        'page_title' => 'Global Info',
-        'menu_title' => 'Global Info',
-        'menu_slug'  => 'global-info',
-        'capability' => 'edit_posts',
-        'redirect'   => false
-    ]);
+  acf_add_options_page([
+    'page_title' => 'Global Info',
+    'menu_title' => 'Global Info',
+    'menu_slug'  => 'global-info',
+    'capability' => 'edit_posts',
+    'redirect'   => false
+  ]);
 }

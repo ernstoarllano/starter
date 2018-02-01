@@ -1,39 +1,39 @@
 {
-    "dependencies": {
-        "main.js": {
-            "files": [
-                "scripts/main.js"
-            ],
-            "main": true
-        },
-        "main.css": {
-            "files": [
-                "styles/main.scss"
-            ],
-            "main": true
-        },
-        "admin.css": {
-            "files": [
-                "styles/admin.scss"
-            ]
-        },
-        "tinymce.css": {
-            "files": [
-                "styles/tinymce.scss"
-            ]
-        },
-        "customizer.js": {
-            "files": [
-                "scripts/customizer.js"
-            ]
-        },
-        "jquery.js": {
-            "bower": [
-                "jquery"
-            ]
-        }
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
     },
-    "config": {
-        "devUrl": "http://example.dev"
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "admin.css": {
+      "files": [
+        "styles/admin.scss"
+      ]
+    },
+    "tinymce.css": {
+      "files": [
+        "styles/tinymce.scss"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": [
+        "jquery"
+      ]
     }
+  },
+  "config": {
+    "devUrl": "http://example.dev"
+  }
 }

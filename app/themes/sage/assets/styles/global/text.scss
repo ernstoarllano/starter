@@ -1,11 +1,71 @@
-// Text Center
+// Generic text transforms
 //
-// Use this class to center text.
+// Use these classes modify text appearance.
 //
 // Markup:
-// <p class="text-center">Text</p>
+// <p class="text-normal">Text</p>
 //
 
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-normal {
+  text-transform: none;
+}
+
+// Generic text aligns
+//
+// Use these classes to modify text alignment.
+//
+// Markup:
+// <p class="text-left">Text</p>
+//
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-center {
-    text-align: center;
+  text-align: center;
+}
+
+// Breakpoint based text aligns
+//
+// Use theses classes to modify text alignment based on breakpoint(s).
+//
+// Markup:
+// <p class="text-left@md">Text</p>
+//
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media($breakpoint) {
+    .text-left\@#{$breakpoint} {
+      text-align: left;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media($breakpoint) {
+    .u-text-right\@#{$breakpoint} {
+      text-align: right;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media($breakpoint) {
+    .u-text-center\@#{$breakpoint} {
+      text-align: center;
+    }
+  }
 }

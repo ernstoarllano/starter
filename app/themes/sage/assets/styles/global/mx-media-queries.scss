@@ -6,13 +6,13 @@
 /// @require {variable} $breakpoints
 ///
 @mixin media($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-            @content;
-        }
-    } @else {
-        @warn 'Couldn\'t find a breakpoint named \'#{$breakpoint}\'.';
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
     }
+  } @else {
+    @warn 'Couldn\'t find a breakpoint named \'#{$breakpoint}\'.';
+  }
 }
 
 ///
@@ -23,11 +23,11 @@
 /// @require {variable} $breakpoints
 ///
 @mixin media-max($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (max-width: #{map-get($breakpoints, $breakpoint ) - 1}) {
-            @content;
-        }
-    } @else {
-        @warn 'Couldn\'t find a breakpoint named \'#{$breakpoint}\'.';
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint ) - 1}) {
+      @content;
     }
+  } @else {
+    @warn 'Couldn\'t find a breakpoint named \'#{$breakpoint}\'.';
+  }
 }

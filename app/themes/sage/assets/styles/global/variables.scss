@@ -1,11 +1,11 @@
 // Breakpoints
 ///
 $breakpoints: (
-    xs: 480px,  // Extra Small devices (landscape phones, 480px and up)
-    sm: 768px,  // Small devices (tablets, 768px and up)
-    md: 1024px, // Medium devices (desktops, 1024px and up)
-    lg: 1200px, // Large devices (desktops, 1200px and up)
-    xl: 1500px  // Extra Lage devices (desktops, 1500px and up)
+  xs: 480px,  // Extra Small devices (landscape phones, 480px and up)
+  sm: 768px,  // Small devices (tablets, 768px and up)
+  md: 1024px, // Medium devices (desktops, 1024px and up)
+  lg: 1200px, // Large devices (desktops, 1200px and up)
+  xl: 1500px  // Extra Lage devices (desktops, 1500px and up)
 );
 
 // Base global defaults
@@ -20,24 +20,24 @@ $base-font-color:   #000000;
 // Font sizes
 ///
 $font-sizes: (
-    'h1': (
-        'initial':  22px,
-        'sm':       36px
-    ),
-    'h2': (
-        'initial':  20px,
-        'sm':       30px
-    ),
-    'h3': (
-        'initial':  18px,
-        'sm':       24px
-    ),
-    'h4': (
-        'initial':  16px,
-        'sm':       18px
-    ),
-    'h5':           14px,
-    'h6':           12px
+  'h1': (
+    'initial':  22px,
+    'sm':       36px
+  ),
+  'h2': (
+    'initial':  20px,
+    'sm':       30px
+  ),
+  'h3': (
+    'initial':  18px,
+    'sm':       24px
+  ),
+  'h4': (
+    'initial':  16px,
+    'sm':       18px
+  ),
+  'h5':         14px,
+  'h6':         12px
 );
 
 // Column offsets
@@ -56,60 +56,60 @@ $debug: false;
 // Colors Map for @function color();
 ///
 $colors: (
-    'grey': (
-        'default':      #efefef,
-        'medium':       #e5e5e5
-    ),
-    'bigrigmedia': (
-        'orange':       #f6921e,
-        'grey':         #4d4d4d
-    )
+  'grey': (
+    'default':      #efefef,
+    'medium':       #e5e5e5
+  ),
+  'bigrigmedia': (
+    'orange':       #f6921e,
+    'grey':         #4d4d4d
+  )
 );
 
 // Alerts Map for @function alert();
 ///
 $alerts: (
-    'success': (
-        'default':  #dff0d8,
-        'message':  #3c763d,
-        'border':   #d6e9c6
-    ),
-    'info': (
-        'default':  #d9edf7,
-        'message':  #31708f,
-        'border':   #bce8f1
-    ),
-    'warning': (
-        'default':  #fcf8e3,
-        'message':  #8a6d3b,
-        'border':   #faf2cc
-    ),
-    'error': (
-        'default':  #f2dede,
-        'message':  #a94442,
-        'border':   #ebcccc
-    )
+  'success': (
+    'default':  #dff0d8,
+    'message':  #3c763d,
+    'border':   #d6e9c6
+  ),
+  'info': (
+    'default':  #d9edf7,
+    'message':  #31708f,
+    'border':   #bce8f1
+  ),
+  'warning': (
+    'default':  #fcf8e3,
+    'message':  #8a6d3b,
+    'border':   #faf2cc
+  ),
+  'error': (
+    'default':  #f2dede,
+    'message':  #a94442,
+    'border':   #ebcccc
+  )
 );
 
 // Social Networks Map for @function social();
 ///
 $social-networks: (
-    facebook:   #3b5998,
-    twitter:    #00aced,
-    googleplus: #dd4b39,
-    linkedin:   #007bb6,
-    youtube:    #bb0000,
-    instagram:  #517fa4,
-    pinterest:  #cb2027,
-    flickr:     #ff0084,
-    tumblr:     #32506d,
-    foursquare: #0072b1,
-    dribble:    #ea4c89,
-    vine:       #00bf8f
+  facebook:   #3b5998,
+  twitter:    #00aced,
+  googleplus: #dd4b39,
+  linkedin:   #007bb6,
+  youtube:    #bb0000,
+  instagram:  #517fa4,
+  pinterest:  #cb2027,
+  flickr:     #ff0084,
+  tumblr:     #32506d,
+  foursquare: #0072b1,
+  dribble:    #ea4c89,
+  vine:       #00bf8f
 );
 
 // Z-index Map for @function z();
 ///
 $z-index: (
-    debug: 1
+  debug: 1
 );

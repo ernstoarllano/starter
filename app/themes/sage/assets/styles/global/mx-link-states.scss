@@ -4,18 +4,18 @@
 /// @param {boolean} $parent [true] - Can include the parent selector too if set to
 ///
 @mixin link-states($parent: false) {
-    @if ($parent){
-        &,
-        &:hover,
-        &:active,
-        &:focus {
-            @content;
-        }
-    } @else {
-        &:hover,
-        &:active,
-        &:focus {
-            @content;
-        }
+  @if ($parent){
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
     }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
 }

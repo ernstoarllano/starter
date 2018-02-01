@@ -4,7 +4,7 @@
 /// @param {number} $number
 ///
 @function neg($number) {
-    @return -($number);
+  @return -($number);
 }
 
 ///
@@ -13,7 +13,7 @@
 /// @param {number} $number
 ///
 @function halve($number) {
-    @return round($number / 2);
+  @return round($number / 2);
 }
 
 ///
@@ -22,5 +22,5 @@
 /// @param {number} $number
 ///
 @function quarter($number) {
-    @return round($number / 4);
+  @return round($number / 4);
 }

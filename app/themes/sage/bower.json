@@ -1,15 +1,13 @@
 {
-    "name": "sage",
-    "homepage": "https://roots.io/sage/",
-    "authors": [
-        "Ben Word <ben@benword.com>"
-    ],
-    "license": "MIT",
-    "private": true,
-    "dependencies": {
-        "fastclick": "1.0.6"
-    },
-    "overrides": {
-
-    }
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fastclick": "1.0.6"
+  },
+  "overrides": {}
 }
