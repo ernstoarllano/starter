@@ -8,6 +8,8 @@ textarea {
   padding: rem(10px);
   border: 1px solid color('grey', 'medium');
   border-radius: 0;
+  appearance: none;
+  outline: none;
 }
 
 input[type="submit"] {

@@ -1,47 +1,36 @@
 ///
-// Font Sizes
-// @param  {string} $size Name of a font size set in $font-sizes.
+/// Returns unitless number.
 ///
-@mixin font-size($size) {
+/// @param {size} $size
+///
+@function strip-unit($size) {
+  @return $size / ($size * 0 + 1);
+}
 
-  @if map-has-key($font-sizes, $size) {
+///
+/// Returns fluid typography.
+///
+/// @param {min-vw} $min-vw {max-vw} $max-vw {min-font-size} $min-font-size {max-font-size} $max-font-size
+/// @link https://css-tricks.com/snippets/css/fluid-typography/
+///
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
 
-    $font-size: map-get($font-sizes, $size);
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
 
-    @if type-of($font-size) == 'number' {
-
-      font-size: em(map-get($font-sizes, $size));
-
-    } @elseif type-of($font-size) == 'map' {
-
-      font-size: em(map-get($font-size, 'initial'));
-
-      @each $key, $value in $font-size {
-
-        @if $key != 'initial' {
-
-          @include media(#{$key}) {
-
-            font-size: em($value);
-
-          }
-
-        }
-
+      @media (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
 
-    } @else {
-
-      @warn "`#{$size}` must be a string or map";
-      @return null;
-
+      @media (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
     }
-
-  } @else {
-
-    @warn "`#{$size}` does not have a value set in $font-sizes. (#{map-keys($font-sizes)})";
-    @return null;
-
   }
-
 }
+

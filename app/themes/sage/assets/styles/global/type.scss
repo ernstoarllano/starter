@@ -13,25 +13,29 @@ h6 {
 }
 
 h1 {
-  @include font-size('h1');
+  @include fluid-type(320px, 1200px, 38px, 40px);
 }
 
 h2 {
-  @include font-size('h2');
+  @include fluid-type(320px, 1200px, 30px, 32px);
 }
 
 h3 {
-  @include font-size('h3');
+  @include fluid-type(320px, 1200px, 26px, 28px);
 }
 
 h4 {
-  @include font-size('h4');
+  @include fluid-type(320px, 1200px, 22px, 24px);
 }
 
 h5 {
-  @include font-size('h5');
+  @include fluid-type(320px, 1200px, 18px, 20px);
 }
 
 h6 {
-  @include font-size('h6');
+  @include fluid-type(320px, 1200px, 14px, 16px);
+}
+
+p {
+  @include fluid-type(320px, 1200px, 16px, 18px);
 }

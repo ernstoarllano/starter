@@ -85,7 +85,7 @@ class NavWalker extends \Walker_Nav_Menu {
     $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'is-active', $classes);
     $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
 
-    $classes[] = 'nav__item menu-' . $slug;
+    $classes[] = 'nav__item nav__item--' . $slug;
 
     $classes = array_unique($classes);
 
@@ -118,7 +118,7 @@ function nav_menu_args($args = '') {
   if (!$args['walker']) {
     $sagextras_nav_menu_args['walker'] = new NavWalker();
   }
-  
+
   return array_merge($args, $sagextras_nav_menu_args);
 }
 
@@ -127,7 +127,7 @@ function nav_menu_args($args = '') {
  */
 function root_relative_url($input) {
   $url = parse_url($input);
-    
+
   if (!isset($url['host']) || !isset($url['path'])) {
     return $input;
   }
@@ -137,7 +137,7 @@ function root_relative_url($input) {
   if (!isset($url['scheme'])) {
     $url['scheme'] = $site_url['scheme'];
   }
-    
+
   $hosts_match = $site_url['host'] === $url['host'];
   $schemes_match = $site_url['scheme'] === $url['scheme'];
   $ports_exist = isset($site_url['port']) && isset($url['port']);
@@ -153,7 +153,7 @@ function root_relative_url($input) {
 function url_compare($url, $rel) {
   $url = trailingslashit($url);
   $rel = trailingslashit($rel);
-    
+
   if ((strcasecmp($url, $rel) === 0) || root_relative_url($url) == $rel) {
     return true;
   } else {

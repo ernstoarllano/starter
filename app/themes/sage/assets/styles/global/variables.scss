@@ -17,29 +17,6 @@ $base-font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-line-height:  1.5;
 $base-font-color:   #000000;
 
-// Font sizes
-///
-$font-sizes: (
-  'h1': (
-    'initial':  22px,
-    'sm':       36px
-  ),
-  'h2': (
-    'initial':  20px,
-    'sm':       30px
-  ),
-  'h3': (
-    'initial':  18px,
-    'sm':       24px
-  ),
-  'h4': (
-    'initial':  16px,
-    'sm':       18px
-  ),
-  'h5':         14px,
-  'h6':         12px
-);
-
 // Column offsets
 //
 // Will enable the creation of column offset classes

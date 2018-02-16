@@ -1,3 +1,5 @@
+<?php use Roots\Sage\Extras; ?>
+
 <?php get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
@@ -10,4 +12,6 @@
   <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 <?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<?php if ($wp_query->max_num_pages > 1) { ?>
+    <?= Extras\numbered_pagination($wp_query); ?>
+<?php } ?>

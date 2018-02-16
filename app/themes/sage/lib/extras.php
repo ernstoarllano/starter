@@ -120,17 +120,15 @@ add_shortcode('inner', __NAMESPACE__ . '\\column_inner');
  *
  * Return numbered pagination
  */
-function numbered_pagination()
+function numbered_pagination($query)
 {
-  global $wp_query;
-
   $limit = 999999999;
 
   $pagination = paginate_links([
-    'base'    => str_replace( $limit, '%#%', esc_url(get_pagenum_link($limit))),
+    'base'    => str_replace($limit, '%#%', esc_url(get_pagenum_link($limit))),
     'format'  => '/page/%#%',
-    'current' => max( 1, get_query_var('paged') ),
-    'total'   => $wp_query->max_num_pages,
+    'current' => max(1, get_query_var('paged')),
+    'total'   => $query->max_num_pages,
     'type'    => 'array'
   ]);
 
@@ -159,13 +157,18 @@ function numbered_pagination()
 function image_tag($html, $id, $alt, $title, $align, $size)
 {
   list($img_src) = image_downsize($id, $size);
-  
+
   $class = 'align'.esc_attr($align).' size-'.esc_attr($size).' wp-image-'.$id;
   $class = apply_filters('get_image_tag_class', $class, $id, $align, $size);
-    
+
   return '<img src="'.get_stylesheet_directory_uri().'/dist/images/loading.gif" data-src="'.esc_attr($img_src).'" alt="'.esc_attr($alt).'" class="'.$class.'" />';
 }
 //add_filter('get_image_tag', __NAMESPACE__ . '\\image_tag', 10, 6);
+
+/**
+ * Set post thumbnail size
+ */
+//set_post_thumbnail_size(285, 190, true);
 
 /**
  * Custom image sizes
@@ -176,7 +179,7 @@ function image_tag($html, $id, $alt, $title, $align, $size)
  */
 
 $custom_sizes = [
-    
+
 ];
 
 if (!empty($custom_sizes)) {
@@ -186,8 +189,24 @@ if (!empty($custom_sizes)) {
 }
 
 /**
+ * Remove default image sizes
+ *
+ * @link https://developer.wordpress.org/reference/hooks/intermediate_image_sizes_advanced/
+ * @param array $sizes
+ */
+function remove_default_images($sizes) {
+  unset($sizes['small']); // 150px
+  unset($sizes['medium']); // 300px
+  unset($sizes['medium_large']); // 768px
+  unset($sizes['large']); // 1024px
+
+  return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', __NAMESPACE__ . '\\remove_default_images' );
+
+/**
  * Add custom image sizes to media library
- * 
+ *
  * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/image_size_names_choose
  * @param array $sizes
  */

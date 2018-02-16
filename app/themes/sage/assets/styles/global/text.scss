@@ -56,7 +56,7 @@
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media($breakpoint) {
-    .u-text-right\@#{$breakpoint} {
+    .text-right\@#{$breakpoint} {
       text-align: right;
     }
   }
@@ -64,7 +64,7 @@
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media($breakpoint) {
-    .u-text-center\@#{$breakpoint} {
+    .text-center\@#{$breakpoint} {
       text-align: center;
     }
   }

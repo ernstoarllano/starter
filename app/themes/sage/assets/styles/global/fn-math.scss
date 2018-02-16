@@ -24,3 +24,12 @@
 @function quarter($number) {
   @return round($number / 4);
 }
+
+///
+/// Returns number as rounded double the number passed.
+///
+/// @param {number} $number
+///
+@function double($number) {
+  @return round($number * 2);
+}

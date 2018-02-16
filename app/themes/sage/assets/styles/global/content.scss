@@ -1,15 +1,24 @@
-// Content
+// CMS Content
 //
-// Use this class for the content component.
+// Use this class for the cms content component.
 //
 // Markup:
-// <div class="content">Content</div>
-// <section class="content">Content</button>
+// <div class="cms-content">Content</div>
+// <section class="cms-content">Content</button>
 //
 // Modifier:
-// <div class="content content--home">Content</div>
+// <div class="cms-content content--home">Content</div>
 //
-.content {
-  padding-top: rem($base-gutter);
-  padding-bottom: rem($base-gutter);
+.cms-content {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: rem($base-gutter) rem(halve($base-gutter));
+
+  // Medium Desktops
+  @include media(md) {
+    padding-top: rem(double($base-gutter));
+    padding-bottom: rem(double($base-gutter));
+  }
 }

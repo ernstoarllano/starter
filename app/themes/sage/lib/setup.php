@@ -68,10 +68,10 @@ function widgets_init()
   register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="c-footer__block %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h6 class="c-footer__block__title">',
-    'after_title'   => '</h6>'
+    'before_widget' => '<div class="footer-column %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4 class="footer-column__title">',
+    'after_title'   => '</h4>'
   ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
@@ -117,6 +117,7 @@ function display_sidebar()
 function assets()
 {
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+
   //wp_enqueue_style('sage/shame_css', get_stylesheet_directory_uri().'/shame/shame.css', false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
@@ -124,6 +125,7 @@ function assets()
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+
   //wp_enqueue_script('sage/shame_js', get_stylesheet_directory_uri().'/shame/shame.js', ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
@@ -138,7 +140,7 @@ function defer_scripts($tag, $handle, $src)
   ];
 
   if (in_array($handle, $scripts)) {
-    return '<script src="'.$src.'" defer="defer"></script>'; 
+    return '<script src="'.$src.'" defer="defer"></script>';
   }
 
   return $tag;
