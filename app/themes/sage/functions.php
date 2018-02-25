@@ -16,7 +16,9 @@ $sage_includes = [
   'lib/titles.php',       // Page titles
   'lib/wrapper.php',      // Theme wrapper class
   'lib/customizer.php',   // Theme customizer
-  'lib/nav.php'           // Custom nav walker
+  'lib/nav.php',          // Custom nav walker
+  'lib/gravityforms.php', // Gravity Forms customizations
+  'lib/woocommerce.php'   // Woocommerce customizations
 ];
 
 foreach ($sage_includes as $file) {

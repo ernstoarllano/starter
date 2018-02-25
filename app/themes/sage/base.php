@@ -12,7 +12,7 @@ use Roots\Sage\Wrapper;
     get_template_part('templates/debug');
     get_template_part('templates/header');
   ?>
-  <main class="main-content" role="main">
+  <main class="main-content">
     <?php if (Setup\display_content()) : ?>
       <div class="cms-content">
         <?php if (Setup\display_sidebar()) : ?>

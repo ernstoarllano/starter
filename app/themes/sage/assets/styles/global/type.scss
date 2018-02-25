@@ -1,6 +1,5 @@
 // Default typography styling.
 //
-
 h1,
 h2,
 h3,
@@ -36,6 +35,17 @@ h6 {
   @include fluid-type(320px, 1200px, 14px, 16px);
 }
 
-p {
+p,
+li:not([class]) {
   @include fluid-type(320px, 1200px, 16px, 18px);
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+i,
+em {
+  font-style: normal;
 }

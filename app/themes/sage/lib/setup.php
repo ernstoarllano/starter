@@ -105,7 +105,8 @@ function display_sidebar()
     is_404(),
     is_front_page(),
     is_page(),
-    is_page_template('template-custom.php'),
+    is_home(),
+    is_single()
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -124,6 +125,8 @@ function assets()
     wp_enqueue_script('comment-reply');
   }
 
+  //wp_enqueue_script('sage/lazyload', get_stylesheet_directory_uri().'/assets/scripts/lazyload.js', [], null, false);
+
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
   //wp_enqueue_script('sage/shame_js', get_stylesheet_directory_uri().'/shame/shame.js', ['jquery'], null, true);
@@ -136,6 +139,7 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 function defer_scripts($tag, $handle, $src)
 {
   $scripts = [
+    'sage/lazyload',
     'sage/js'
   ];
 

@@ -3,18 +3,17 @@
 // Use these classes modify text appearance.
 //
 // Markup:
-// <p class="text-normal">Text</p>
+// <p class="ttn">Text</p>
 //
-
-.text-lowercase {
+.ttl {
   text-transform: lowercase;
 }
 
-.text-uppercase {
+.ttu {
   text-transform: uppercase;
 }
 
-.text-normal {
+.ttn {
   text-transform: none;
 }
 
@@ -23,18 +22,17 @@
 // Use these classes to modify text alignment.
 //
 // Markup:
-// <p class="text-left">Text</p>
+// <p class="tal">Text</p>
 //
-
-.text-left {
+.tal {
   text-align: left;
 }
 
-.text-right {
+.tar {
   text-align: right;
 }
 
-.text-center {
+.tac {
   text-align: center;
 }
 
@@ -45,10 +43,9 @@
 // Markup:
 // <p class="text-left@md">Text</p>
 //
-
 @each $breakpoint in map-keys($breakpoints) {
   @include media($breakpoint) {
-    .text-left\@#{$breakpoint} {
+    .tal\@#{$breakpoint} {
       text-align: left;
     }
   }
@@ -56,7 +53,7 @@
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media($breakpoint) {
-    .text-right\@#{$breakpoint} {
+    .tar\@#{$breakpoint} {
       text-align: right;
     }
   }
@@ -64,7 +61,7 @@
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media($breakpoint) {
-    .text-center\@#{$breakpoint} {
+    .tac\@#{$breakpoint} {
       text-align: center;
     }
   }

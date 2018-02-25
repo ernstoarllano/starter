@@ -1,10 +1,13 @@
 // Default image element styling.
 //
-
 img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+}
+
+img:not([src]) {
+  visibility: hidden;
 }
 
 figure {

@@ -40,7 +40,7 @@ class NavWalker extends \Walker_Nav_Menu {
 
     if ($item->is_dropdown && ($depth === 0)) {
       $item_html = str_replace('<a', '<a', $item_html);
-      $item_html = str_replace('</a>', '</a><span class="nav__toggle js-dropdown-toggle"></span>', $item_html);
+      $item_html = str_replace('</a>', '</a><button class="dropdown-toggle js-toggle-dropdown"></button>', $item_html);
     }
 
     $item_html = apply_filters('sage/wp_nav_menu_item', $item_html);

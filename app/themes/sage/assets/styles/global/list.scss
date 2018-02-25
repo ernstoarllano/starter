@@ -1,0 +1,66 @@
+// List Classes
+//
+// Use these classes for styling lists.
+//
+// Markup:
+// <ul class="lf">
+//
+ol:not([class]),
+ul:not([class]),
+.lfl,
+.lfr {
+  margin-top: 0;
+  margin-bottom: rem($base-gutter);
+  padding-left: rem(20px);
+}
+
+ul:not([class]),
+.lfl,
+.lfr {
+  list-style-type: none;
+
+  li:not([class]) {
+    position: relative;
+    padding-left: rem(20px);
+
+    &:before {
+      content: '\2022';
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: color('grey', 'medium');
+    }
+
+    + li:not([class]) {
+      margin-top: rem($base-gutter);
+    }
+  }
+}
+
+// List Floats
+//
+.lfl,
+.lfr {
+  // Medium Desktops
+  @include media(md) {
+    width: 50%;
+  }
+}
+
+// Float Left
+//
+.lfl {
+  // Medium Desktops
+  @include media(md) {
+    float: left;
+  }
+}
+
+// Float Right
+//
+.lfr {
+  // Medium Desktops
+  @include media(md) {
+    float: right;
+  }
+}

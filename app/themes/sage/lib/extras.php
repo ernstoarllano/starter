@@ -150,7 +150,6 @@ function numbered_pagination($query)
  * Image Tag
  *
  * @link https://codex.wordpress.org/Function_Reference/get_image_tag
- * @link http://luis-almeida.github.io/unveil/
  *
  * Return modified version of WordPress image tag to lazy load images
  */
@@ -161,7 +160,7 @@ function image_tag($html, $id, $alt, $title, $align, $size)
   $class = 'align'.esc_attr($align).' size-'.esc_attr($size).' wp-image-'.$id;
   $class = apply_filters('get_image_tag_class', $class, $id, $align, $size);
 
-  return '<img src="'.get_stylesheet_directory_uri().'/dist/images/loading.gif" data-src="'.esc_attr($img_src).'" alt="'.esc_attr($alt).'" class="'.$class.'" />';
+  return '<img data-src="'.esc_attr($img_src).'" alt="'.esc_attr($alt).'" class="'.$class.'" />';
 }
 //add_filter('get_image_tag', __NAMESPACE__ . '\\image_tag', 10, 6);
 

@@ -88,5 +88,8 @@ $social-networks: (
 // Z-index Map for @function z();
 ///
 $z-index: (
-  debug: 1
+  debug: 1,
+  behind: -1,
+  demigod: 1000,
+  god: 99999
 );

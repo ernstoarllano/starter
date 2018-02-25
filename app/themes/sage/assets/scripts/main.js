@@ -30,10 +30,68 @@
         // External links
         $('a').filter(function () {
           return this.hostname && this.hostname !== location.hostname;
-        }).addClass('external').attr('target', '_blank');
+        }).addClass('is-external').attr('target', '_blank');
+
+        // Navigation
+        /*
+        $('.js-toggle-nav').click(function (e) {
+          e.preventDefault();
+
+          $('.header').toggleClass('is-visible');
+        });
+
+        // Dropdown
+        $('.js-toggle-dropdown').click(function (e) {
+          e.preventDefault();
+
+          $(this).parent().toggleClass('is-expanded').siblings().removeClass('is-expanded');
+        });
+        */
+
+        // Initiate lazy load
+        //new LazyLoad();
       },
       finalize: function () {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        var viewportWidth = $(window).width();
+        var maxViewport = 1024;
+
+        /*
+        // Hero background
+        var hero = $('.hero');
+        var heroMobileBG = hero.data('mobile');
+        var heroDesktopBG = hero.data('desktop');
+
+        if (viewportWidth < maxViewport) {
+          hero.css('background-image', 'url(' + heroMobileBG + ')');
+        } else {
+          hero.css('background-image', 'url(' + heroDesktopBG + ')');
+        }
+
+        // Detect window scroll
+        var jsScrollCheck = $('.js-scroll-check');
+
+        $('window').on('scroll', function() {
+          var viewportTop = $(window).scrollTop();
+          var viewportBottom = viewportTop + $(this).height();
+
+          // Add class to body
+          if (viewportTop > 1) {
+            $('body').addClass('is-scrolling');
+          } else {
+            $('body').removeClass('is-scrolling');
+          }
+
+          // Detect if element is visible in viewport
+          jsScrollCheck.each(function () {
+            var jsScrollCheckTop = $(this).offset().top;
+
+            if (jsScrollCheckTop < viewportBottom) {
+              $(this).addClass('is-visible');
+            }
+          });
+        });
+        */
       }
     },
     // Home page

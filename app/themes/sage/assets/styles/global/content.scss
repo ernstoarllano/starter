@@ -1,6 +1,6 @@
 // CMS Content
 //
-// Use this class for the cms content component.
+// Use these classes for the content component(s).
 //
 // Markup:
 // <div class="cms-content">Content</div>
@@ -9,7 +9,8 @@
 // Modifier:
 // <div class="cms-content content--home">Content</div>
 //
-.cms-content {
+.cms-content,
+.static-content {
   width: 100%;
   max-width: 1200px;
   margin-left: auto;

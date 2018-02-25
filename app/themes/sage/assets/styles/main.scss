@@ -36,7 +36,10 @@
 // Column................Grid columns.
 //
 // UTILITIES
+// Font..................Font utlities.
+// Color.................Color utilities.
 // Text..................Text utilities.
+// List..................List utilities.
 // WordPress.............WordPress elements.
 //
 // COMPONENTS
@@ -47,9 +50,12 @@
 // Logo..................Logo elements.
 // Header................Header elements.
 // Hero..................Hero elements.
+// Section...............Section elements.
+// Content...............Content elements.
 // Footer................Footer elements.
 //
 // TRUMPS
+// Gravity Form..........Gravity Forms elements.
 // Overrides.............Override elements.
 ///
 
@@ -101,7 +107,10 @@
 ///
 // Utilities
 ///
+@import "global/font";
+@import "global/color";
 @import "global/text";
+@import "global/list";
 @import "global/wordpress";
 
 ///
@@ -114,10 +123,12 @@
 @import "global/nav";
 @import "global/header";
 @import "global/hero";
+@import "global/section";
 @import "global/content";
 @import "global/footer";
 
 ///
 // Trumps
 ///
+//@import "global/gravityforms";
 @import "global/overrides";

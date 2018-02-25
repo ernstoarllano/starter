@@ -1,4 +1,4 @@
-<header class="header" role="banner">
+<header class="header">
   <div class="header-container">
     <a class="logo" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     <nav class="nav nav--header">
@@ -8,7 +8,7 @@
         endif;
       ?>
     </nav>
-    <button class="nav-toggle" role="button">
+    <button class="nav-toggle">
       <span class="nav-toggle__line"></span>
     </button>
   </div>
