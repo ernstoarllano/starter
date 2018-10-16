@@ -27,12 +27,17 @@
     "wpackagist-plugin/configure-smtp": "3.*",
     "wpackagist-plugin/google-analytics-for-wordpress": "5.*",
     "wpackagist-plugin/imsanity": "2.*",
+    "wpackagist-plugin/stream": "3.*",
     "wpackagist-plugin/wordfence": "6.*"
   },
   "extra": {
     "installer-paths": {
-      "app/themes/{$name}": ["type:wordpress-theme"],
-      "app/plugins/{$name}": ["type:wordpress-plugin"]
+      "app/themes/{$name}": [
+        "type:wordpress-theme"
+      ],
+      "app/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ]
     },
     "webroot-dir": "wp",
     "webroot-package": "wordpress/wordpress"
