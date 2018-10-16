@@ -29,6 +29,7 @@
     "wpackagist-plugin/google-analytics-for-wordpress": "7.*",
     "wpackagist-plugin/imsanity": "2.*",
     "wpackagist-plugin/query-monitor": "3.*",
+    "wpackagist-plugin/stream": "3.*",
     "wpackagist-plugin/wordfence": "7.*",
     "wpackagist-plugin/wp-optimize": "2.*"
   },
