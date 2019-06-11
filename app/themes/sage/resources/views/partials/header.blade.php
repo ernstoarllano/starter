@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <a class="brand header__brand" href="{{ home_url('/') }}">
+    <a class="brand header__brand" href="{{ home_url('/') }}" title="Go Home">
       @if(get_option('branding'))
         <img src={{ get_option('branding') }} alt="{{ get_bloginfo('name', 'display') }}">
       @else

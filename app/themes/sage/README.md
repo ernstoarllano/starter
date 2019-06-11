@@ -73,6 +73,7 @@ Edit `app/setup.php` to enable or disable theme features, setup navigation menus
 
 ### Build commands
 
+* `yarn cache clean` - Purge theme cache
 * `yarn start` — Compile assets when file changes are made, start Browsersync session
 * `yarn build` — Compile and optimize the files in your assets directory
 * `yarn build:production` — Compile assets for production
