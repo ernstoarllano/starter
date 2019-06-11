@@ -1,0 +1,50 @@
+// Post
+article.post {
+  @apply relative;
+
+  // 1024
+  @media (min-width: 1024px) {
+    .blog &,
+    .author &,
+    .category &,
+    .tag & {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 30px;
+    }
+  }
+}
+
+// Adjacent Posts
+article.post + article.post {
+  @apply mt-10;
+}
+
+// Background
+.post__bg {
+  @apply relative mb-5 py-32;
+
+  // Has Loaded
+  &.has-loaded {
+    @apply bg-center bg-no-repeat bg-cover;
+  }
+}
+
+// Link
+.post__link {
+  @apply absolute pin;
+}
+
+// Header
+.post__header {
+  @apply mb-5;
+}
+
+// Title
+.post__title {
+  @apply mb-2;
+
+  a {
+    @apply no-underline;
+  }
+}

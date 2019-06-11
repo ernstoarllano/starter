@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-5 font-normal leading-normal;
+}
+
+p,
+li:not([class]) {
+  @apply text-lg leading-normal;
+}
+
+p {
+  @apply mb-8;
+}
+
+strong,
+b,
+em,
+i {
+  @apply font-normal;
+}
+
+a:not([class]) {
+  @apply text-current;
+}

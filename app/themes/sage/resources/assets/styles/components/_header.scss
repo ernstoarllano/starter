@@ -1,0 +1,9 @@
+// Header
+.header {
+  @apply py-10;
+}
+
+// Container
+.header__container {
+  @apply flex flex-row flex-wrap items-center justify-between relative;
+}

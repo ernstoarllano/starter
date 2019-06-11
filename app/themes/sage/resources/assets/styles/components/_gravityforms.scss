@@ -1,0 +1,14 @@
+// Custom Gravity Forms styling
+// Use at your own risk
+.gfield {
+  @apply relative;
+
+  input,
+  textarea {
+    @apply border border-solid border-grey;
+  }
+
+  select {
+    @apply border border-solid border-grey rounded-none appearance-none;
+  }
+}

@@ -1,0 +1,47 @@
+// Hero
+.hero {
+  @apply relative h-screen max-h-hero overflow-hidden;
+
+  // Home Specific
+  .page-template-template-home & {
+    // 1024
+    @media (min-width: 1024px) {
+      @apply max-h-hero-home;
+    }
+  }
+
+  // Has Background
+  &.has-bg {
+    @apply bg-center bg-no-repeat bg-cover;
+
+    // 1023 <=
+    @media (max-width: 1023px) {
+      @apply py-32;
+    }
+  }
+}
+
+// Video
+.hero__video {
+  @apply absolute pin w-full h-full;
+
+  object-fit: cover;
+}
+
+// Carousel
+.hero__carousel {
+  @apply w-full h-full;
+}
+
+// Carousel Image
+.hero__carousel__image {
+  // Has Loaded
+  &.has-loaded {
+    @apply w-screen h-screen max-h-hero bg-center bg-no-repeat bg-cover;
+
+    // 1024
+    @media (min-width: 1024px) {
+      @apply max-h-hero-home;
+    }
+  }
+}

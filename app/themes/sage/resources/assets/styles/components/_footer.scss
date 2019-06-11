@@ -1,0 +1,22 @@
+// Footer
+.footer {
+  @apply py-8 text-white;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply py-16;
+  }
+}
+
+// Creator
+.footer__creator {
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply block;
+  }
+}
+
+// Link
+.footer__link {
+  @apply text-current no-underline;
+}
