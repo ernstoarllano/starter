@@ -9,10 +9,10 @@
       "package": {
         "name": "wordpress/wordpress",
         "type": "webroot",
-        "version": "4.9.8",
+        "version": "5.2.1",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/4.9.8.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/5.2.1.zip"
         },
         "require": {
           "fancyguy/webroot-installer": "1.1.0"
@@ -21,11 +21,10 @@
     }
   ],
   "require": {
-    "wordpress/wordpress": "4.9.8",
+    "wordpress/wordpress": "5.2.1",
     "fancyguy/webroot-installer": "1.1.0",
     "wpackagist-plugin/autodescription": "3.*",
     "wpackagist-plugin/autoptimize": "2.*",
-    "wpackagist-plugin/configure-smtp": "3.*",
     "wpackagist-plugin/google-analytics-for-wordpress": "7.*",
     "wpackagist-plugin/imsanity": "2.*",
     "wpackagist-plugin/query-monitor": "3.*",
