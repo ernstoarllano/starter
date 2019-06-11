@@ -5,6 +5,7 @@
 !.htaccess
 !.gitignore
 !app/
+!data/
 !default.htm
 !composer.json
 !index.php
