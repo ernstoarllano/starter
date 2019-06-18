@@ -1,3 +1,8 @@
+### 9.0.9: June 17th, 2019
+* Wrap ACF dependent partials with logic to check ACF is installed and activated
+* Add new social options for YouTube and Vimeo
+* Add default social links to footer partial
+
 ### 9.0.9: February 13th, 2019
 * Update to Bootstrap 4.3.1 ([#2153](https://github.com/roots/sage/pull/2153))
 

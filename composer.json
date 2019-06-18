@@ -30,6 +30,7 @@
     "wpackagist-plugin/query-monitor": "3.*",
     "wpackagist-plugin/stream": "3.*",
     "wpackagist-plugin/wordfence": "7.*",
+    "wpackagist-plugin/wp-mail-smtp": "1.*",
     "wpackagist-plugin/wp-optimize": "2.*"
   },
   "extra": {

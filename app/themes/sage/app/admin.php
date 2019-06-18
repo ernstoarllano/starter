@@ -98,6 +98,8 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
         'Instagram'         => 'instagram_url',
         'Pinterest'         => 'pinterest_url',
         'LinkedIn'          => 'linkedin_url',
+        'YouTube'           => 'youtube_url',
+        'Vimeo'             => 'vimeo_url',
     ];
 
     // Set social options
