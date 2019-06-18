@@ -25,7 +25,7 @@
     "fancyguy/webroot-installer": "1.1.0",
     "wpackagist-plugin/autodescription": "3.*",
     "wpackagist-plugin/autoptimize": "2.*",
-    "wpackagist-plugin/classic-editor": "1.5*",
+    "wpackagist-plugin/classic-editor": "1.*",
     "wpackagist-plugin/google-analytics-for-wordpress": "7.*",
     "wpackagist-plugin/imsanity": "2.*",
     "wpackagist-plugin/query-monitor": "3.*",
