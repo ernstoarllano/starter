@@ -7,7 +7,7 @@
 
   @if (!have_posts())
     <div class="alert alert--error">
-      {{ __('Sorry, no results were found.', 'sage') }}
+      <p>{{ __('Sorry, no results were found.', 'sage') }}</p>
     </div>
   @endif
 

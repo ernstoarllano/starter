@@ -1,3 +1,8 @@
+### 9.0.9: July 13th, 2019
+* Wrap alerts in paragraph tags to appease certain complaints
+* Minor styling adjustments
+* Minor template adjustments
+
 ### 9.0.9: June 17th, 2019
 * Wrap ACF dependent partials with logic to check ACF is installed and activated
 * Add new social options for YouTube and Vimeo
