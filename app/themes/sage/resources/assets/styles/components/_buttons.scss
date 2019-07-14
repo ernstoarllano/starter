@@ -1,0 +1,28 @@
+// Button
+.btn {
+  @apply inline-block py-2 px-5 text-white no-underline;
+}
+
+// Primary
+.btn--primary {
+  @apply bg-primary-1;
+
+  // Hover State
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-primary-2;
+    }
+  }
+}
+
+// Secondary
+.btn--secondary {
+  @apply bg-primary-2;
+
+  // Hover State
+  @media (hover: hover) {
+    &:hover {
+      @apply bg-primary-1;
+    }
+  }
+}

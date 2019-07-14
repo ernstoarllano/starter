@@ -1,0 +1,9 @@
+/**
+ * Shame CSS
+ *
+ * Dedicated stylesheet to house quick fixes and hacks that can be refactored
+ * at a later time. Please make sure to use !important if you are overriding
+ * existing styling and make sure to document your changes.
+ *
+ * Remember to enque the file in the assets function in app/setup.php
+ */

@@ -1,0 +1,118 @@
+/*
+ * @link http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+// All WordPress Generated Classes
+.alignnone,
+.aligncenter,
+.alignleft,
+.alignright {
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply block mx-auto;
+  }
+}
+
+// Align None
+.alignnone {
+  @apply mx-auto max-w-full h-auto;
+}
+
+// Align Center
+.aligncenter {
+  @apply block h-auto my-2 mx-auto;
+}
+
+// Align Left & Right
+.alignleft,
+.alignright {
+  @apply h-auto mb-4;
+}
+
+// Align Left
+.alignleft {
+  // 1024
+  @media (min-width: 1024px) {
+    @apply mr-4 float-left;
+  }
+}
+
+// Align Right
+.alignright {
+  // 1024
+  @media (min-width: 1024px) {
+    @apply ml-4 float-right;
+  }
+}
+
+// Caption
+.wp-caption {
+  @apply inline-block mb-4;
+
+  img {
+    @apply mb-2 leading-none max-w-full h-auto;
+  }
+}
+
+// Caption Text
+.wp-caption-text {
+  @apply text-sm text-grey-darkest;
+}
+
+// Screen Reader Text
+.sr-only,
+.screen-reader-text {
+  @apply absolute w-px h-px p-0 overflow-hidden border-0 whitespace-no-wrap;
+
+  clip: rect(0, 0, 0, 0);
+}
+
+.sr-only-focusable:active,
+.screen-reader-text:active,
+.sr-only-focusable:focus,
+.screen-reader-text:focus {
+  @apply static w-auto h-auto overflow-visible whitespace-normal;
+
+  clip: auto;
+}
+
+// Gallery
+div.gallery {
+  @apply mb-8;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+
+  img {
+    @apply block mx-auto;
+  }
+}
+
+div.gallery-columns-2 {
+  // 1024
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+div.gallery-columns-3 {
+  // 1024
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+div.gallery-columns-4 {
+  // 1024
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+div.gallery-columns-5 {
+  // 1024
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

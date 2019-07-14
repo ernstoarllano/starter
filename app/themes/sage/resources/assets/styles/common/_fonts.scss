@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  src:
+    url("../fonts/fontawesome/fa-brands-400.woff2") format("woff2"),
+    url("../fonts/fontawesome/fa-brands-400.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro Light";
+  src:
+    url("../fonts/fontawesome/fa-light-300.woff2") format("woff2"),
+    url("../fonts/fontawesome/fa-light-300.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro Regular";
+  src:
+    url("../fonts/fontawesome/fa-regular-400.woff2") format("woff2"),
+    url("../fonts/fontawesome/fa-regular-400.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro Solid";
+  src:
+    url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"),
+    url("../fonts/fontawesome/fa-solid-900.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}

@@ -15,6 +15,19 @@
  */
 
 /**
+ * Allow all file uploads eg: SVG
+ * Only allow locally
+ */
+define('ALLOW_UNFILTERED_UPLOADS', false); 
+
+/*
+ * Compression
+ */
+define('COMPRESS_SCRIPTS', true);
+define('COMPRESS_CSS', true);
+define('ENFORCE_GZIP', true);
+
+/**
  * Disable automatic update
  *
  * @link http://codex.wordpress.org/Configuring_Automatic_Background_Updates
@@ -82,10 +95,10 @@ switch(WP_ENV){
 define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+define('DB_COLLATE', 'utf8mb4_unicode_ci');
 
 /** Custom Content Directory **/
 define('WP_CONTENT_DIR', dirname( __FILE__ ) . '/app');
@@ -135,9 +148,6 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
-
-/** Enable theme debug mode **/
-define('THEME_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

@@ -5,6 +5,7 @@
 !.htaccess
 !.gitignore
 !app/
+!data/
 !default.htm
 !composer.json
 !index.php
@@ -34,11 +35,6 @@ app/themes/sage/node_modules/*
 app/themes/sage/vendor/*
 
 #################
-## PhpStorm
-#################
-app/themes/sage/.idea/*
-
-#################
 ## OS X
 #################
-app/themes/sage/.DS_Store
+.DS_Store

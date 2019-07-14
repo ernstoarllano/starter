@@ -1,0 +1,21 @@
+// Social Links
+.social-links {
+  @apply flex flex-row items-center;
+}
+
+// Social Link
+.social-link {
+  @apply flex flex-row flex-no-wrap items-center;
+
+  svg {
+    @apply w-auto h-8;
+  }
+}
+
+// Adjacent Social Links
+.social-link + .social-link {
+  // 1024
+  @media (min-width: 1024px) {
+    @apply ml-5;
+  }
+}

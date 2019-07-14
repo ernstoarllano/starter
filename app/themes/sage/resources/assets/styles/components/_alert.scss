@@ -1,0 +1,24 @@
+// Alert
+.alert {
+  @apply p-4 mt-8 leading-normal;
+}
+
+// Success Alert
+.alert--success {
+  @apply bg-green-lightest;
+}
+
+// Info Alert
+.alert--info {
+  @apply bg-blue-lightest;
+}
+
+// Warning Alert
+.alert--warning {
+  @apply bg-yellow-lightest;
+}
+
+// Error Alert
+.alert--error {
+  @apply bg-red-lightest;
+}

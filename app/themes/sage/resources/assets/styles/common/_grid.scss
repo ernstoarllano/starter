@@ -1,0 +1,83 @@
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+  xl: 1500px,
+);
+
+$columns: 12 !default;
+
+// Create breakpoints
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Couldn\'t find a breakpoint named \'#{$breakpoint}\'.";
+  }
+}
+
+// Row
+.row {
+  @apply flex flex-col flex-wrap;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply flex-row flex-no-wrap justify-between;
+  }
+}
+
+// Adjacent Rows
+.row + .row {
+  @apply mt-8;
+}
+
+// Adjacent Columns
+.col + .col {
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply mt-8;
+  }
+}
+
+// Create column classes
+@for $i from 1 through $columns {
+  $width: percentage($i / $columns);
+
+  @if $i == 12 {
+    .col-#{$i} {
+      width: #{$width};
+    }
+  }
+
+  @else {
+    .col-#{$i} {
+      width: calc(#{$width} - 15px);
+    }
+  }
+}
+
+// Create breakpoint based column classes
+@each $breakpoint in map-keys($breakpoints) {
+  @include media($breakpoint) {
+    @for $i from 1 through $columns {
+      $width: percentage($i / $columns);
+
+      @if $i == 12 {
+        .#{$breakpoint}\:col-#{$i} {
+          width: #{$width};
+        }
+      }
+
+      @else {
+        .#{$breakpoint}\:col-#{$i} {
+          width: calc(#{$width} - 15px);
+        }
+      }
+    }
+  }
+}

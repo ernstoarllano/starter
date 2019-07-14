@@ -1,0 +1,97 @@
+// Section
+.section {
+  @apply py-8;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply py-16;
+  }
+
+  // Background Loaded
+  &.has-loaded {
+    @apply bg-center bg-no-repeat bg-cover;
+  }
+
+  // Background Color
+  &.bg-white {
+    @apply text-primary-1;
+  }
+}
+
+// Split
+.section--split {
+  @apply py-0;
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply flex flex-row flex-no-wrap justify-between;
+  }
+}
+
+// Background & Content
+.section__bg,
+.section__content {
+  // 1024
+  @media (min-width: 1024px) {
+    @apply w-1/2;
+  }
+}
+
+// Background
+.section__bg {
+  // Has Loaded
+  &.has-loaded {
+    @apply min-h-split bg-center bg-no-repeat bg-cover;
+  }
+
+  // Is Flipped
+  .flip & {
+    // 1024
+    @media (min-width: 1024px) {
+      order: 2;
+    }
+  }
+}
+
+// Content
+.section__content {
+  @apply px-base py-10;
+
+  // 1023 <=
+  @media (max-width: 1023px) {
+    @apply text-center;
+  }
+
+  // 1024
+  @media (min-width: 1024px) {
+    @apply px-10;
+  }
+
+  // Is Flipped
+  .flip & {
+    // 1024
+    @media (min-width: 1024px) {
+      order: 1;
+    }
+  }
+}
+
+// Content Inner
+.section__content__inner {
+  // 1200
+  @media (min-width: 1200px) {
+    @apply ml-0 mr-auto;
+
+    max-width: 540px;
+
+    // Is Flipped
+    .flip & {
+      @apply mr-0 ml-auto;
+    }
+  }
+}
+
+// Header
+.section__header {
+  @apply text-center;
+}
